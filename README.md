@@ -6,6 +6,19 @@
 nodeとnpmをインストールしてから以下の手順に従って環境構築してください。
 
 ### 環境構築
+以下のようなディレクトリ構成になるよう環境を構築します。
+```bash
+├── build
+│   ├── app.js
+│   └── app.js.map
+├── package-lock.json
+├── package.json
+├── src
+│   └── app.ts
+└── tsconfig.json
+```
+
+以下の手順を実行します。
 ```bash
 # ディレクトリ作成して移動
 $ mkdir beginner_lesson
@@ -34,7 +47,24 @@ $ mkdir build
   },
 ```
 
-### Hello worldを表示する
+エディタを用いてtsconfig.jsonを作成します。
+内容は以下のコードを記載し保存します。
+```json
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "sourceMap": true,
+    "types": ["node"],
+    "outDir": "./build/"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
+```
+
+### Hello! world.を表示する
 src配下にapp.tsを作成し、エディタで以下のコードを実装して保存します。
 ```typescript
 console.log("Hello! world.")
