@@ -1,6 +1,6 @@
-# TypeScript入門コード
+# TypeScript入門
 
-> 初学者向けTypeScriptの構文理解のためのソースコード
+> 初学者向け TypeScript構文理解のためのソースコード
 
 ## 手順
 nodeとnpmをインストールしてから以下の手順に従って環境構築してください。
@@ -29,6 +29,7 @@ $ mkdir build
   "scripts": {
     "build": "node_modules/.bin/tsc",
     "start": "node build/app.js",
+    "serve": "npm run build && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
 ```
@@ -55,6 +56,16 @@ app.jsを実行します。
 $ npm run start
 Hello! world.
 ```
-無事、実行環境が整いました。
+無事、表示されました。
+
+また、先ほどscriptsに追加したserveを使えば1回でビルドと実行をしてくれます。
+```bash
+# ビルド後に実行
+$ npm run serve
+Hello! world.
+```
+
+以上です。<br>
+以降、随時コンテンツを追加していきます。
 
 
