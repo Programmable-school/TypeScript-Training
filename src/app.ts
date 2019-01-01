@@ -1,4 +1,4 @@
-import { Lesson1, Lesson2, Lesson3, LessonXXX } from './lesson/Lesson'
+import { Lesson1, Lesson2, Lesson3, Lesson4, Lesson5, Lesson6, Lesson7, LessonXXX } from './lesson/Lesson'
 
 /* Lesson_1 Hello! World.を表示 */
 console.log('---- Lesson 1 ----')
@@ -12,11 +12,35 @@ Lesson2()
 console.log('------------------')
 console.log('')
 
-/* Lesson_3 Optional型 */
+/* Lesson_3 Any型 */
 console.log('---- Lesson 3 ----')
-console.log('result1', Lesson3('shohei', 'developer'))
-console.log('result1', Lesson3('shohei', undefined))
-console.log('result1', Lesson3('shohei', null))
+Lesson3()
+console.log('------------------')
+console.log('')
+
+/* Lesson_4 Optional型 */
+console.log('---- Lesson 4 ----')
+console.log('result1', Lesson4('shohei', 'developer'))
+console.log('result1', Lesson4('shohei', undefined))
+console.log('result1', Lesson4('shohei', null))
+console.log('------------------')
+console.log('')
+
+/* Lesson_5 演算子 */
+console.log('---- Lesson 5 ----')
+Lesson5()
+console.log('------------------')
+console.log('')
+
+/* Lesson_6 if分 */
+console.log('---- Lesson 6 ----')
+Lesson6()
+console.log('------------------')
+console.log('')
+
+/* Lesson_7 比較演算子 */
+console.log('---- Lesson 7 ----')
+Lesson7()
 console.log('------------------')
 console.log('')
 
