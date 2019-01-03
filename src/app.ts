@@ -1,4 +1,5 @@
-import { Lesson1, Lesson2, Lesson3, Lesson4, Lesson5, Lesson6, Lesson7, LessonXXX } from './lesson/Lesson'
+import { Lesson1, Lesson2, Lesson3, Lesson4, Lesson5, 
+  Lesson6, Lesson7, Lesson8, Lesson9, Lesson10, LessonXXX } from './lesson/Lesson'
 
 /* Lesson_1 Hello! World.を表示 */
 console.log('---- Lesson 1 ----')
@@ -20,9 +21,7 @@ console.log('')
 
 /* Lesson_4 Optional型 */
 console.log('---- Lesson 4 ----')
-console.log('result1', Lesson4('shohei', 'developer'))
-console.log('result1', Lesson4('shohei', undefined))
-console.log('result1', Lesson4('shohei', null))
+Lesson4()
 console.log('------------------')
 console.log('')
 
@@ -41,6 +40,24 @@ console.log('')
 /* Lesson_7 比較演算子 */
 console.log('---- Lesson 7 ----')
 Lesson7()
+console.log('------------------')
+console.log('')
+
+/* Lesson_8 AND・OR */
+console.log('---- Lesson 8 ----')
+Lesson8()
+console.log('------------------')
+console.log('')
+
+/* Lesson_9 三項演算子 */
+console.log('---- Lesson 9 ----')
+Lesson9()
+console.log('------------------')
+console.log('')
+
+/* Lesson_10 switch文 */
+console.log('---- Lesson 10 ----')
+Lesson10()
 console.log('------------------')
 console.log('')
 
