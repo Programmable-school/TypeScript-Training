@@ -2,13 +2,13 @@ import Staff from '../model/Staff'
 import Manager from '../model/Manager'
 import SalaryController from '../controller/SalaryController'
 
-/* Lesson_1 Hello! World.を表示 */
-export function Lesson1() {
+/* Hello! World.を表示 */
+export function Lesson_HelloWorld() {
   console.log('Hello! world.') // Hello! world.
 }
 
-/* Lesson_2 変数と定数 */
-export function Lesson2() {
+/* 変数と定数 */
+export function Lesson_LetConst() {
   // 変数
   let count: number = 1
   count += 1
@@ -23,8 +23,18 @@ export function Lesson2() {
   console.log('定数', name)   // 定数 山田太郎
 }
 
-/* Lesson_3 Any型 */
-export function Lesson3() {
+/* プリミティブ型、Any型 */
+export function Lesson_PriAny() {
+  // プリミティブ型
+  const num: number = 10	          // number型
+  const str: string = '文字列'       // string型
+  const isActive: boolean = true	  // boolean型
+
+  console.log('num', num)           // num 10
+  console.log('str', str)           // str 文字列
+  console.log('isActive', isActive) // isActive true
+
+  // Any型（なんでも入る）
   let variable: any
   variable = 1
   console.log('number', variable) // number 1
@@ -39,8 +49,8 @@ export function Lesson3() {
   console.log('class', variable) // class 2019-01-03T00:23:46.481Z
 }
 
-/* Lesson_4 Optional型 */
-export function Lesson4() {
+/* Optional型 */
+export function Lesson_Optional() {
   console.log('result1', Lesson4_1('shohei', 'developer'))  // result1 shoheiはdeveloper
   console.log('result1', Lesson4_1('shohei', undefined))    // result1 profileがundefinedです
   console.log('result1', Lesson4_1('shohei', null))         // result1 profileがnullです
@@ -52,8 +62,8 @@ function Lesson4_1(name: string, profile?: string): string {
   return name + 'は' + profile
 }
 
-/* Lesson_5 演算子 */
-export function Lesson5() {
+/* 演算子 */
+export function Lesson_Calc() {
   let variable: number = 1
   const resultA: number = variable + 2
   const resultB: number = variable * 2
@@ -73,8 +83,12 @@ export function Lesson5() {
   console.log('resultF', resultF)   // resultF 0.5
 }
 
-/* Lesson_6 if分 */
-export function Lesson6() {
+/* 配列 */
+
+/* 連想配列 */
+
+/* if分 */
+export function Lesson_If() {
   let variable: number = 1
   if (variable === 1) {
     console.log(`Case ${variable}`, 'variableは1です。')         // Case 1 variableは1です。
@@ -98,8 +112,9 @@ export function Lesson6() {
     console.log(`Case ${variable}`, 'variableは0以外です。')    // ※ココは通らない
   }
 }
-/* Lesson_7 比較演算子 */
-export function Lesson7() {
+
+/* 比較演算子 */
+export function Lesson_Compare() {
   let variable: number = 1
   
   if (variable === 1) {
@@ -133,8 +148,8 @@ export function Lesson7() {
   }
 }
 
-/* Lesson_8 AND・OR */
-export function Lesson8() {
+/* AND・OR */
+export function Lesson_AndOr() {
   const isActive: boolean = true
   const age: number = 20
   
@@ -151,8 +166,8 @@ export function Lesson8() {
   }
 }
 
-/* Lesson_9 三項演算子 */
-export function Lesson9() {
+/* 三項演算子 */
+export function Lesson_Ternary() {
   const isActive: boolean = true
   const age: number = 20
 
@@ -162,16 +177,16 @@ export function Lesson9() {
   console.log('OR', resultB)   // OR isActiveだけ一致
 }
 
-/* Lesson_10 switch文 */
-export function Lesson10() {
-  const resultA: string = Lesson10_1(1988)
-  const resultB: string = Lesson10_1(2018)
-  const resultC: string = Lesson10_1(100000)
+/* switch文 */
+export function Lesson_Switch() {
+  const resultA: string = Lesson_Switch_0(1988)
+  const resultB: string = Lesson_Switch_0(2018)
+  const resultC: string = Lesson_Switch_0(100000)
   console.log(resultA)  // 昭和63年
   console.log(resultB)  // 平成30年
   console.log(resultC)  // 分かりません！
 }
-function Lesson10_1(year: number): string {
+function Lesson_Switch_0(year: number): string {
   let result: string
   switch (year) {
     case 1988:
@@ -185,17 +200,22 @@ function Lesson10_1(year: number): string {
   }
   return result
 }
-/* Lesson_11 配列 */
-/* Lesson_12 for文 */
-/* Lesson_13 関数 */
-/* Lesson_XXX Enum */
-/* Lesson_XXX クラス */
-/* Lesson_XXX Date */
-/* Lesson_XXX 数値計算 */
-/* Lesson_XXX 継承 */
-/* Lesson_XXX キャスト変換 */
-/* Lesson_XXX ジェネリクス */
-export function LessonXXX() {
+/* while文 */
+/* for文 */
+/* 関数 */
+/* Enum */
+/* クラス */
+/* キャスト変換 */
+/* 日付関数（Date） */
+/* 数値計算（Math） */
+/* static */
+/* 継承 */
+/* インターフェース */
+/* 非同期処理 */
+/* ReactiveX */
+
+/* ジェネリクス */
+export function Lesson_Generics() {
   const staff = new Staff()
   staff.setData('大学生A', 'イベントのスタッフです。')
   const manager = new Manager()

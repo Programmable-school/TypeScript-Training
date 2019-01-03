@@ -1,68 +1,68 @@
-import { Lesson1, Lesson2, Lesson3, Lesson4, Lesson5, 
-  Lesson6, Lesson7, Lesson8, Lesson9, Lesson10, LessonXXX } from './lesson/Lesson'
+import { Lesson_HelloWorld, Lesson_LetConst, Lesson_PriAny, Lesson_Optional, Lesson_Calc, 
+  Lesson_If, Lesson_Compare, Lesson_AndOr, Lesson_Ternary, Lesson_Switch, Lesson_Generics } from './lesson/Lesson'
 
-/* Lesson_1 Hello! World.を表示 */
-console.log('---- Lesson 1 ----')
-Lesson1()
+/* Hello! World.を表示 */
+console.log('---- Lesson_HelloWorld ----')
+Lesson_HelloWorld()
 console.log('------------------')
 console.log('')
 
-/* Lesson_2 変数 */
-console.log('---- Lesson 2 ----')
-Lesson2()
+/* 変数 */
+console.log('---- Lesson_LetConst ----')
+Lesson_LetConst()
 console.log('------------------')
 console.log('')
 
-/* Lesson_3 Any型 */
-console.log('---- Lesson 3 ----')
-Lesson3()
+/* プリミティブ型、Any型 */
+console.log('---- Lesson_PriAny ----')
+Lesson_PriAny()
 console.log('------------------')
 console.log('')
 
-/* Lesson_4 Optional型 */
-console.log('---- Lesson 4 ----')
-Lesson4()
+/* Optional型 */
+console.log('---- Lesson_Optional ----')
+Lesson_Optional()
 console.log('------------------')
 console.log('')
 
-/* Lesson_5 演算子 */
-console.log('---- Lesson 5 ----')
-Lesson5()
+/* 演算子 */
+console.log('---- Lesson_Calc ----')
+Lesson_Calc()
 console.log('------------------')
 console.log('')
 
-/* Lesson_6 if分 */
-console.log('---- Lesson 6 ----')
-Lesson6()
+/* if分 */
+console.log('---- Lesson_If ----')
+Lesson_If()
 console.log('------------------')
 console.log('')
 
-/* Lesson_7 比較演算子 */
-console.log('---- Lesson 7 ----')
-Lesson7()
+/* 比較演算子 */
+console.log('---- Lesson_Compare ----')
+Lesson_Compare()
 console.log('------------------')
 console.log('')
 
-/* Lesson_8 AND・OR */
-console.log('---- Lesson 8 ----')
-Lesson8()
+/* AND・OR */
+console.log('---- Lesson_AndOr ----')
+Lesson_AndOr()
 console.log('------------------')
 console.log('')
 
-/* Lesson_9 三項演算子 */
-console.log('---- Lesson 9 ----')
-Lesson9()
+/* 三項演算子 */
+console.log('---- Lesson_Ternary ----')
+Lesson_Ternary()
 console.log('------------------')
 console.log('')
 
-/* Lesson_10 switch文 */
-console.log('---- Lesson 10 ----')
-Lesson10()
+/* switch文 */
+console.log('---- Lesson_Switch ----')
+Lesson_Switch()
 console.log('------------------')
 console.log('')
 
-/* Lesson_XXX ジェネリクス */
-console.log('---- Lesson XXX ----')
-LessonXXX()
+/* ジェネリクス */
+console.log('---- Lesson_Generics ----')
+Lesson_Generics()
 console.log('------------------')
 console.log('')
