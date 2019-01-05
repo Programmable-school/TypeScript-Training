@@ -1,6 +1,6 @@
 import { Lesson_HelloWorld, Lesson_LetConst, Lesson_PriAny, Lesson_Optional, Lesson_Calc, 
-  Lesson_Array, Lesson_AssociativeArray, Lesson_FilterMapReduceSort, Lesson_If, Lesson_Compare, Lesson_AndOr, 
-  Lesson_Ternary, Lesson_Switch, Lesson_While, Lesson_For,
+  Lesson_Array, Lesson_AssociativeArray, Lesson_ListOperation, Lesson_If, Lesson_Compare, Lesson_AndOr, 
+  Lesson_Switch, Lesson_While, Lesson_For,
   Lesson_Generics } from './lesson/Lesson'
 
 /* Hello! World.を表示 */
@@ -38,9 +38,9 @@ console.log('---- Lesson_AssociativeArray ----')
 Lesson_AssociativeArray()
 console.log('------------------\n')
 
-/* filter, map, reduce, sort */
-console.log('---- Lesson_FilterMapReduceSort ----')
-Lesson_FilterMapReduceSort()
+/* リスト操作 */
+console.log('---- Lesson_ListOperation ----')
+Lesson_ListOperation()
 console.log('------------------\n')
 
 /* if分（条件判断） */
@@ -53,14 +53,9 @@ console.log('---- Lesson_Compare ----')
 Lesson_Compare()
 console.log('------------------\n')
 
-/* AND・OR */
+/* AND・OR, 三項演算子 */
 console.log('---- Lesson_AndOr ----')
 Lesson_AndOr()
-console.log('------------------\n')
-
-/* 三項演算子 */
-console.log('---- Lesson_Ternary ----')
-Lesson_Ternary()
 console.log('------------------\n')
 
 /* switch文（条件判断） */
@@ -69,7 +64,7 @@ Lesson_Switch()
 console.log('------------------\n')
 
 /* while文（繰り返し） */
-console.log('---- Lesson_For ----')
+console.log('---- Lesson_While ----')
 Lesson_While()
 console.log('------------------\n')
 

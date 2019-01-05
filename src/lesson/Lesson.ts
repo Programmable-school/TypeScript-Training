@@ -64,7 +64,7 @@ function Lesson4_1(name: string, profile?: string): string {
 
 /* 演算子 */
 export function Lesson_Calc() {
-  let variable: number = 1
+  const variable: number = 1
   const resultA: number = variable + 2
   const resultB: number = variable * 2
   const resultC: number = variable / 2
@@ -130,73 +130,76 @@ export function Lesson_AssociativeArray() {
                      //   { name: 'Ueda', age: 40 } ]
 }
 
-/* filter, map, reduce, every, some, sort */
-export function Lesson_FilterMapReduceSort() {
+/* リスト操作 */
+export function Lesson_ListOperation() {
   const nums: number[] = [0, 1, 2, 3, 4, 5]
   
-  // filter 条件に合う値だけを取り出します。条件に当てはまる要素が複数ある場合があるので配列で取得される。
+  // ■ filter
+  // 条件に合う値だけを取り出します。条件に当てはまる要素が複数ある場合があるので配列で取得される。
+  // 書き方1
   const numsFiltered1: number[] = nums.filter(item => item === 0)
   console.log('filter1', numsFiltered1) // filter1 [0]
 
+  // 書き方2
   const numsFiltered2: number[] = nums.filter(item => { 
-    if (item%2 === 0) {
+    if (item === 0) {
       return true
-    } else {
-      return false
     }
+    return false
   })
-  console.log('filter2', numsFiltered2) // filter2 [0, 2, 4]
+  console.log('filter2', numsFiltered2) // filter2 [0]
 
-  // map 新しい要素の配列を作成する。値を加工して新しい配列を作成するときに利用する。
+  // ■ map
+  // 新しい要素の配列を作成する。値を加工して新しい配列を作成するときに利用する。
+  // 書き方1
   const numsMap1: number[] = nums.map(item => item * 2)
   console.log('map1', numsMap1) // map1 [ 0, 2, 4, 6, 8, 10 ]
 
-  const numsMap2: number[] = nums.map(item => { 
-    if (item%2 === 0) {
-      return 0
-    } else {
-      return item
-    }
-  })
-  console.log('map2', numsMap2) // map2 [ 0, 1, 0, 3, 0, 5 ]
+  // 書き方2
+  const numsMap2: number[] = nums.map(item => { return item * 2 })
+  console.log('map2', numsMap2) // map2 [ 0, 2, 4, 6, 8, 10 ]
 
-  // reduce 配列の要素を左から右へ適用し,単一の値にします。
-  const reduce1: number = nums.reduce((previousItem, currentItem) => previousItem + currentItem )
+  // ■ reduce
+  // 配列の要素を左から右へ適用し,単一の値にします。
+  const reduce1: number = nums.reduce((prevItem, currentItem) => prevItem + currentItem )
   console.log('reduce1', reduce1) // reduce1 15
 
-  const maxReduce2: number = nums.reduce((previousItem, currentItem) => {
-    if (previousItem > currentItem) {
-      return previousItem
+  const maxReduce2: number = nums.reduce((prevItem, currentItem) => {
+    if (prevItem > currentItem) {
+      return prevItem
     } else {
       return currentItem
     }
   })
   console.log('maxReduce2', maxReduce2) // maxReduce2 5
 
-  const minReduce3: number = nums.reduce((previousItem, currentItem) => {
-    if (previousItem > currentItem) {
+  const minReduce3: number = nums.reduce((prevItem, currentItem) => {
+    if (prevItem > currentItem) {
       return currentItem
     } else {
-      return previousItem
+      return prevItem
     }
   })
   console.log('minReduce3', minReduce3) // minReduce3 0
 
-  // every 全ての要素が条件を満たす場合は trueを返す
+  // ■ every
+  // 全ての要素が条件を満たす場合は trueを返す
   const isEvery1: boolean = nums.every(item => item >= 0)
   console.log('isEvery1', isEvery1) // isEvery1 true
 
   const isEvery2: boolean = nums.every(item => item%2 === 0)
   console.log('isEvery2', isEvery2) // isEvery2 false
 
-  // some 条件を満たす要素が１つでもある場合は trueを返す
+  // ■ some
+  // 条件を満たす要素が１つでもある場合は trueを返す
   const isSome1: boolean = nums.some(item => item >= 0)
   console.log('isSome1', isSome1) // isSome1 true
 
   const isSome2: boolean = nums.some(item => item%2 === 0)
   console.log('isSome2', isSome2) // isSome2 true
 
-  // sort 配列の要素を並べ替える
+  // ■ sort
+  // 配列の要素を並べ替える
   const sort1: number[] = nums.sort((previousItem, currentItem) => {
     if (previousItem < currentItem) { 
       return -1
@@ -277,11 +280,12 @@ export function Lesson_Compare() {
   }
 }
 
-/* AND・OR */
+/* AND・OR, 三項演算子 */
 export function Lesson_AndOr() {
   const isActive: boolean = true
   const age: number = 20
   
+  // 書き方1
   if (isActive && age === 20) {
     console.log('AND', 'isActiveとageは一致')  // AND isActiveとageは一致
   } else {
@@ -293,13 +297,8 @@ export function Lesson_AndOr() {
   } else {
     console.log('OR', '一致しない')            // ※ココは通らない
   }
-}
 
-/* 三項演算子 */
-export function Lesson_Ternary() {
-  const isActive: boolean = true
-  const age: number = 20
-
+  // 書き方2 三項演算子
   const resultA: string = isActive && age === 20 ? 'isActiveとageは一致' : '一致しない'
   const resultB: string = isActive || age === 30 ? 'isActiveだけ一致' : '一致しない'
   console.log('AND', resultA)  // AND isActiveとageは一致
