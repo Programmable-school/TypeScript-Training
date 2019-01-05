@@ -1,5 +1,6 @@
 import { Lesson_HelloWorld, Lesson_LetConst, Lesson_PriAny, Lesson_Optional, Lesson_Calc, 
-  Lesson_Array, Lesson_AssociativeArray, Lesson_If, Lesson_Compare, Lesson_AndOr, Lesson_Ternary, Lesson_Switch, 
+  Lesson_Array, Lesson_AssociativeArray, Lesson_FilterMapReduceSort, Lesson_If, Lesson_Compare, Lesson_AndOr, 
+  Lesson_Ternary, Lesson_Switch, Lesson_While, Lesson_For,
   Lesson_Generics } from './lesson/Lesson'
 
 /* Hello! World.を表示 */
@@ -21,6 +22,7 @@ console.log('------------------\n')
 console.log('---- Lesson_Optional ----')
 Lesson_Optional()
 console.log('------------------\n')
+
 /* 演算子 */
 console.log('---- Lesson_Calc ----')
 Lesson_Calc()
@@ -37,8 +39,11 @@ Lesson_AssociativeArray()
 console.log('------------------\n')
 
 /* filter, map, reduce, sort */
+console.log('---- Lesson_FilterMapReduceSort ----')
+Lesson_FilterMapReduceSort()
+console.log('------------------\n')
 
-/* if分 */
+/* if分（条件判断） */
 console.log('---- Lesson_If ----')
 Lesson_If()
 console.log('------------------\n')
@@ -58,9 +63,19 @@ console.log('---- Lesson_Ternary ----')
 Lesson_Ternary()
 console.log('------------------\n')
 
-/* switch文 */
+/* switch文（条件判断） */
 console.log('---- Lesson_Switch ----')
 Lesson_Switch()
+console.log('------------------\n')
+
+/* while文（繰り返し） */
+console.log('---- Lesson_For ----')
+Lesson_While()
+console.log('------------------\n')
+
+/* for文（繰り返し） */
+console.log('---- Lesson_For ----')
+Lesson_For()
 console.log('------------------\n')
 
 /* ジェネリクス */

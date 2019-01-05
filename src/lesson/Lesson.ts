@@ -130,9 +130,93 @@ export function Lesson_AssociativeArray() {
                      //   { name: 'Ueda', age: 40 } ]
 }
 
-/* filter, map, reduce, sort */
+/* filter, map, reduce, every, some, sort */
+export function Lesson_FilterMapReduceSort() {
+  const nums: number[] = [0, 1, 2, 3, 4, 5]
+  
+  // filter 条件に合う値だけを取り出します。条件に当てはまる要素が複数ある場合があるので配列で取得される。
+  const numsFiltered1: number[] = nums.filter(item => item === 0)
+  console.log('filter1', numsFiltered1) // filter1 [0]
 
-/* if分 */
+  const numsFiltered2: number[] = nums.filter(item => { 
+    if (item%2 === 0) {
+      return true
+    } else {
+      return false
+    }
+  })
+  console.log('filter2', numsFiltered2) // filter2 [0, 2, 4]
+
+  // map 新しい要素の配列を作成する。値を加工して新しい配列を作成するときに利用する。
+  const numsMap1: number[] = nums.map(item => item * 2)
+  console.log('map1', numsMap1) // map1 [ 0, 2, 4, 6, 8, 10 ]
+
+  const numsMap2: number[] = nums.map(item => { 
+    if (item%2 === 0) {
+      return 0
+    } else {
+      return item
+    }
+  })
+  console.log('map2', numsMap2) // map2 [ 0, 1, 0, 3, 0, 5 ]
+
+  // reduce 配列の要素を左から右へ適用し,単一の値にします。
+  const reduce1: number = nums.reduce((previousItem, currentItem) => previousItem + currentItem )
+  console.log('reduce1', reduce1) // reduce1 15
+
+  const maxReduce2: number = nums.reduce((previousItem, currentItem) => {
+    if (previousItem > currentItem) {
+      return previousItem
+    } else {
+      return currentItem
+    }
+  })
+  console.log('maxReduce2', maxReduce2) // maxReduce2 5
+
+  const minReduce3: number = nums.reduce((previousItem, currentItem) => {
+    if (previousItem > currentItem) {
+      return currentItem
+    } else {
+      return previousItem
+    }
+  })
+  console.log('minReduce3', minReduce3) // minReduce3 0
+
+  // every 全ての要素が条件を満たす場合は trueを返す
+  const isEvery1: boolean = nums.every(item => item >= 0)
+  console.log('isEvery1', isEvery1) // isEvery1 true
+
+  const isEvery2: boolean = nums.every(item => item%2 === 0)
+  console.log('isEvery2', isEvery2) // isEvery2 false
+
+  // some 条件を満たす要素が１つでもある場合は trueを返す
+  const isSome1: boolean = nums.some(item => item >= 0)
+  console.log('isSome1', isSome1) // isSome1 true
+
+  const isSome2: boolean = nums.some(item => item%2 === 0)
+  console.log('isSome2', isSome2) // isSome2 true
+
+  // sort 配列の要素を並べ替える
+  const sort1: number[] = nums.sort((previousItem, currentItem) => {
+    if (previousItem < currentItem) { 
+      return -1
+    } else {
+      return 1
+    }
+  }) // 昇順ソート（小さい順）
+  console.log('sort1', sort1) // sort1 [ 0, 1, 2, 3, 4, 5 ] 
+
+  const sort2: number[] = nums.sort((previousItem, currentItem) => {
+    if (previousItem > currentItem) {
+      return -1
+    } else {
+      return 1
+    }
+  }) // 降順ソート（大きい順）
+  console.log('sort2', sort2) // sort2 [ 5, 4, 3, 2, 1, 0 ] 
+}
+
+/* if分（条件判断） */
 export function Lesson_If() {
   let variable: number = 1
   if (variable === 1) {
@@ -222,7 +306,7 @@ export function Lesson_Ternary() {
   console.log('OR', resultB)   // OR isActiveだけ一致
 }
 
-/* switch文 */
+/* switch文（条件判断） */
 export function Lesson_Switch() {
   const resultA: string = Lesson_Switch_0(1988)
   const resultB: string = Lesson_Switch_0(2018)
@@ -245,8 +329,47 @@ function Lesson_Switch_0(year: number): string {
   }
   return result
 }
-/* while文 */
-/* for文 */
+
+/* while文（繰り返し） */
+export function Lesson_While() {
+  const nums: number[] = [0, 1, 2, 3, 4, 5]
+  let index: number = 0
+  let total: number = nums[0]
+
+  // while
+  while (index < 5) { // 無限ループ注意
+    total += nums[index]
+    index += 1
+  }
+  console.log('while', total) // while 10
+
+  // do-while
+  do {
+    console.log('do-while', `indexは${index}だけど必ず1回は実行される`) // do-while indexは5だけど必ず1回は実行される
+  } while(index < 5) // 繰り返し継続判断は後で実行される。
+}
+
+/* for文（繰り返し） */
+export function Lesson_For() {
+  const nums: number[] = [0, 1, 2, 3, 4, 5]
+  
+  // for
+  for(let i = 0; i < nums.length; i++) {
+    console.log('for', i, nums[i]) // for 0 0 ... for 5 5 順に表示される
+  }
+
+  // for-in
+  for(let i in nums) {
+    console.log('for in', i, nums[i]) // for in 0 0 ... for in 5 5 順に表示される
+  }
+
+  // foreach（オススメ）
+  nums.forEach((item, i) => {
+    console.log('foreach', i, nums[i], item) // foreach 0 0 0 ... foreach 5 5 5 順に表示される
+  })
+
+}
+
 /* 関数 */
 /* Enum */
 /* クラス */
