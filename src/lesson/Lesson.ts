@@ -428,10 +428,10 @@ export function Lesson_Cast() {
 class LessonCast1 {}
 
 /* 数学計算（Math） */
-/* 日付関数（Date） */
-/* static */
-/* 継承 */
-/* インターフェース */
-/* 非同期処理 */
-/* ReactiveX */
+export function Lesson_Math() {
 
+}
+/* 日付関数（Date） */
+export function Lesson_Date() {
+
+}

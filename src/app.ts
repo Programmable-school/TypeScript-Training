@@ -1,9 +1,13 @@
 import { Lesson_HelloWorld, Lesson_LetConst, Lesson_PriAny, Lesson_Optional, Lesson_Calc, 
   Lesson_Array, Lesson_AssociativeArray, Lesson_ListOperation, Lesson_If, Lesson_Compare, Lesson_AndOr, 
-  Lesson_Switch, Lesson_While, Lesson_For, Lesson_Function, Lesson_Enum, Lesson_Cast } from './lesson/Lesson'
+  Lesson_Switch, Lesson_While, Lesson_For, Lesson_Function, Lesson_Enum, Lesson_Cast, Lesson_Math, Lesson_Date } from './lesson/Lesson'
 
 import { Lesson_Class } from './lesson/Lesson_Class'
+import { Lesson_Static } from './lesson/Lesson_Static'
+import { Lesson_Inheritance } from './lesson/Lesson_Inheritance'
+import { Lesson_AsyncProcess } from './lesson/Lesson_AsyncProcess'
 import { Lesson_Generics } from './lesson/Lesson_Generics'
+import { Lesson_ReactiveX } from './lesson/Lesson_ReactiveX'
 
 /* Hello! World.を表示 */
 console.log('---- Lesson_HelloWorld ----')
@@ -93,6 +97,16 @@ console.log('------------------\n')
 /* キャスト変換（型変換） */
 console.log('---- Lesson_Cast ----')
 Lesson_Cast()
+console.log('------------------\n')
+
+/* 数学計算（Math）） */
+console.log('---- Lesson_Math ----')
+Lesson_Math()
+console.log('------------------\n')
+
+/* 日付関数（Date） */
+console.log('---- Lesson_Date ----')
+Lesson_Date()
 console.log('------------------\n')
 
 /* ジェネリクス */

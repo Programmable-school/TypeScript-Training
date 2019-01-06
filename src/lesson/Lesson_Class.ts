@@ -1,17 +1,12 @@
 /* クラス */
-enum SexType {
-  Man,
-  Woman
-}
-
 class Human {
   // ■ 変数（propety）
   public name: string	        // 修飾子:public    外部公開
   sexType: SexType	          // 修飾子:public    修飾子がない場合はpublicになる
   height: number	            // 修飾子:public    修飾子がない場合はpublicになる
   private weight: number	    // 修飾子:private   外部公開しないので自分しか読み書きできない
-  partner?: Human             // optional型で宣言. Optional型の場合はデータにundefinedチェックを行う
-  readonly birthDay: string   // 修飾子:readonly  読み取り専用（定数）
+  partner?: Human	            // optional型で宣言. Optional型の場合はデータにundefinedチェックを行う
+  readonly birthDay: string	  // 修飾子:readonly  読み取り専用（定数）
 
   // ■ コンストラクタはクラスのインスタンス（実体）が生成されたタイミングで処理される
   constructor(sexType: SexType, birthDay: string) {
@@ -47,7 +42,11 @@ class Human {
   private showHonne() {
     console.log('まぁいつ別れるか分からないけどね。これは独り言だから内緒だよ！')
   }
+}
 
+enum SexType {
+  Man,
+  Woman
 }
 
 export function Lesson_Class() {
