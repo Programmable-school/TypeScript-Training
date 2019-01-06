@@ -1,7 +1,3 @@
-import Staff from '../model/Staff'
-import Manager from '../model/Manager'
-import SalaryController from '../controller/SalaryController'
-
 /* Hello! World.を表示 */
 export function Lesson_HelloWorld() {
   console.log('Hello! world.') // Hello! world.
@@ -370,36 +366,72 @@ export function Lesson_For() {
 }
 
 /* 関数 */
+export function Lesson_Function() {
+  Lesson_Function1()                        // 関数です.
+  Lesson_Function2('引数を指定できます')       // 引数を指定できます
+  const result = Lesson_Function3(10, 2)    
+  console.log('足し算の関数', result)         // 足し算の関数 12
+}
+function Lesson_Function1() {
+  console.log('関数です.')
+}
+function Lesson_Function2(str: string) {
+  console.log(str)
+}
+function Lesson_Function3(x: number, y: number): number {
+  return x + y
+}
+
 /* Enum */
-/* クラス */
-/* キャスト変換 */
+enum SocialType {
+  Twitter = 0,
+  Facebook,
+  Instagram 
+}
+export function Lesson_Enum() {
+  let type: SocialType = SocialType.Twitter
+  let typeNum: number = SocialType.Twitter.valueOf()
+  console.log(type)     // 0
+  console.log(typeNum)  // 0
+
+  type = SocialType.Facebook
+  typeNum = SocialType.Facebook.valueOf()
+  console.log(type)     // 1
+  console.log(typeNum)  // 1
+
+  type = SocialType.Instagram
+  typeNum = SocialType.Instagram.valueOf()
+  console.log(type)     // 2
+  console.log(typeNum)  // 2
+}
+
+/* キャスト変換（型変換） */
+export function Lesson_Cast() {
+  const numStr: string = '1000'
+  const num: number = Number(numStr)
+  if (typeof num === 'number') {
+    console.log(`${typeof numStr} -> ${typeof num}`, num)                     // string -> number 1000
+  }
+
+  const strNum: number = 2000
+  const str: string = String(strNum)
+  if (typeof str === 'string') {
+    console.log(`${typeof strNum} -> ${typeof str}`, str, strNum.toString())  // number -> string 2000 2000
+  }
+
+  // インスタンスを型判定をする場合はinstanceofを使う
+  const classAny: any = new LessonCast1()
+  if (classAny instanceof LessonCast1) {
+    console.log('classAnyの型はLessonCast1です')  // classAnyの型はLessonCast1です
+  }
+}
+class LessonCast1 {}
+
+/* 数学計算（Math） */
 /* 日付関数（Date） */
-/* 数値計算（Math） */
 /* static */
 /* 継承 */
 /* インターフェース */
 /* 非同期処理 */
 /* ReactiveX */
 
-/* ジェネリクス */
-export function Lesson_Generics() {
-  const staff = new Staff()
-  staff.setData('大学生A', 'イベントのスタッフです。')
-  const manager = new Manager()
-  manager.setData('社員A', 'イベントのマネージャーです。')
-  manager.companyName = 'Company Inc.'
-  console.log('スタッフのプロフィール', staff.name, staff.profile)
-  console.log('マネージャーのプロフィール', manager.name, manager.profile)
-  
-  // 給料を支払う
-  const salaryController: SalaryController = new SalaryController()
-  salaryController.salalyPay(staff)
-  salaryController.salalyPay(manager)
-  console.log('スタッフの給料', staff.salary)
-  console.log('マネージャーの給料', manager.salary)
-  
-  // マネージャーがスタッフを休憩させる
-  console.log('スタッフの活動フラグ', staff.isActive, '==', staff.isActive == true ? '活動中': '休憩なう')
-  manager.breakStaff(staff)
-  console.log('スタッフの活動フラグ', staff.isActive, '==', staff.isActive == true ? '活動中': '休憩なう')
-}

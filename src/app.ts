@@ -1,7 +1,9 @@
 import { Lesson_HelloWorld, Lesson_LetConst, Lesson_PriAny, Lesson_Optional, Lesson_Calc, 
   Lesson_Array, Lesson_AssociativeArray, Lesson_ListOperation, Lesson_If, Lesson_Compare, Lesson_AndOr, 
-  Lesson_Switch, Lesson_While, Lesson_For,
-  Lesson_Generics } from './lesson/Lesson'
+  Lesson_Switch, Lesson_While, Lesson_For, Lesson_Function, Lesson_Enum, Lesson_Cast } from './lesson/Lesson'
+
+import { Lesson_Class } from './lesson/Lesson_Class'
+import { Lesson_Generics } from './lesson/Lesson_Generics'
 
 /* Hello! World.を表示 */
 console.log('---- Lesson_HelloWorld ----')
@@ -71,6 +73,26 @@ console.log('------------------\n')
 /* for文（繰り返し） */
 console.log('---- Lesson_For ----')
 Lesson_For()
+console.log('------------------\n')
+
+/* 関数 */
+console.log('---- Lesson_Function ----')
+Lesson_Function()
+console.log('------------------\n')
+
+/* Enum */
+console.log('---- Lesson_Enum ----')
+Lesson_Enum()
+console.log('------------------\n')
+
+/* クラス */
+console.log('---- Lesson_Class ----')
+Lesson_Class()
+console.log('------------------\n')
+
+/* キャスト変換（型変換） */
+console.log('---- Lesson_Cast ----')
+Lesson_Cast()
 console.log('------------------\n')
 
 /* ジェネリクス */
