@@ -99,7 +99,7 @@ Hello! world.
 
 コンテンツ準備中のため、<br>
 直接ソースコードを見て写経して学習してください。<br>
-[Lesson.ts](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson.ts)<br>
+[Lesson](https://github.com/Programmable-school/TypeScript-Training/tree/master/src/lesson)<br>
 
 
 
