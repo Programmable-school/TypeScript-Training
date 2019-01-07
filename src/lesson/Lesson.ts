@@ -461,7 +461,7 @@ export function Lesson_Date() {
   console.log(nowDate.toString())   // Mon Jan 07 2019 10:05:06 GMT+0900 (JST)
 
   // ■ タイムゾーン確認（実行環境に依存）
-  console.log('Timezone', nowDate.getTimezoneOffset()/60) // 9 (実行環境によって異なる. 9の場合はUTC+9時間なのでJSTです)
+  console.log('Timezone', nowDate.getTimezoneOffset()/60) // -9 (実行環境によって異なる. -9の場合はUTC+9時間なのでJSTです)
 
   // ■ 文字列から日時を取得
   const date1: Date = new Date('2019/1/6 10:20:30')
