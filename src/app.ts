@@ -5,13 +5,13 @@ import { Lesson_HelloWorld, Lesson_LetConst, Lesson_PriAny, Lesson_Optional, Les
 import { Lesson_Class } from './lesson/Lesson_Class'
 import { Lesson_Static } from './lesson/Lesson_Static'
 import { Lesson_Inheritance } from './lesson/Lesson_Inheritance'
-import { Lesson_AsyncProcess } from './lesson/Lesson_AsyncProcess'
+import { Lesson_Interface } from './lesson/Lesson_Interface'
 import { Lesson_Generics } from './lesson/Lesson_Generics'
+import { Lesson_AsyncProcess } from './lesson/Lesson_AsyncProcess'
 import { Lesson_ReactiveX } from './lesson/Lesson_ReactiveX'
 
 /* Hello! World.を表示 */
 console.log('---- Lesson_HelloWorld ----')
-Lesson_HelloWorld()
 console.log('------------------\n')
 
 /* 変数 */
@@ -109,7 +109,32 @@ console.log('---- Lesson_Date ----')
 Lesson_Date()
 console.log('------------------\n')
 
+/* static 静的 */
+console.log('---- Lesson_Static ----')
+Lesson_Static()
+console.log('------------------\n')
+
+/* 継承 */
+console.log('---- Lesson_Inheritance ----')
+Lesson_Inheritance()
+console.log('------------------\n')
+
+/* インターフェース */
+console.log('---- Lesson_Interface ----')
+Lesson_Interface()
+console.log('------------------\n')
+
 /* ジェネリクス */
 console.log('---- Lesson_Generics ----')
 Lesson_Generics()
+console.log('------------------\n')
+
+/* 非同期処理 */
+console.log('---- Lesson_AsyncProcess ----')
+Lesson_AsyncProcess()
+console.log('------------------\n')
+
+/* ReactiveX */
+console.log('---- Lesson_ReactiveX ----')
+Lesson_ReactiveX()
 console.log('------------------\n')
