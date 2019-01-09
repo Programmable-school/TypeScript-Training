@@ -129,12 +129,10 @@ console.log('---- Lesson_Generics ----')
 Lesson_Generics()
 console.log('------------------\n')
 
-/* 非同期処理 */
-console.log('---- Lesson_AsyncProcess ----')
-Lesson_AsyncProcess()
-console.log('------------------\n')
-
 /* ReactiveX */
 console.log('---- Lesson_ReactiveX ----')
 Lesson_ReactiveX()
 console.log('------------------\n')
+
+/* 非同期処理 */
+Lesson_AsyncProcess()

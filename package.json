@@ -4,7 +4,8 @@
   "description": "beginner's lesson for TypeScript",
   "main": "index.js",
   "dependencies": {
-    "@types/node": "^10.12.18"
+    "@types/node": "^10.12.18",
+    "axios": "^0.18.0"
   },
   "devDependencies": {
     "typescript": "^3.2.2"
