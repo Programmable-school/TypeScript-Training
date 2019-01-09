@@ -104,7 +104,29 @@ Hello! world.
 
 ## Lessonコードを確認する
 本リポジトリをローカルPCへ取り込み、全Lessonのソースコード及び挙動を確認できます。
+```bash
+├── LICENSE
+├── README.md
+├── package.json
+├── src
+│   ├── app.ts
+│   ├── app_async.ts
+│   ├── app_rxjs.ts
+│   ├── lesson
+│   │   ├── Lesson.ts
+│   │   ├── Lesson_AsyncProcess.ts
+│   │   ├── Lesson_Class.ts
+│   │   ├── Lesson_Generics.ts
+│   │   ├── Lesson_Inheritance.ts
+│   │   ├── Lesson_Interface.ts
+│   │   ├── Lesson_ReactiveX.ts
+│   │   └── Lesson_Static.ts
+│   └── utils
+│       └── utils.ts
+├── tsconfig.json
+```
 
+### 手順
 ```bash
 # TypeScript-Trainingをダウンロード
 $ git clone https://github.com/Programmable-school/TypeScript-Training.git
