@@ -1,7 +1,3 @@
-import Staff from '../model/Staff'
-import Manager from '../model/Manager'
-import SalaryController from '../controller/SalaryController'
-
 /* ジェネリクス */
 export function Lesson_Generics() {
   const staff = new Staff()
@@ -23,4 +19,60 @@ export function Lesson_Generics() {
   console.log('スタッフの活動フラグ', staff.isActive, '==', staff.isActive == true ? '活動中': '休憩なう')
   manager.breakStaff(staff)
   console.log('スタッフの活動フラグ', staff.isActive, '==', staff.isActive == true ? '活動中': '休憩なう')
+}
+
+class SalaryController {
+  salalyPay<T extends Human>(employee: T) {
+    if (employee instanceof Staff) {
+      /* employeeがStaffの場合は20万を設定 */
+      console.log('OK, I will be pay salary to Staff.')
+      employee.salary = 200_000
+
+      /* Staffの固有情報を確認する場合はキャスト変換する */
+      const staff: Staff = employee as Staff
+      console.log('スタッフの活動フラグ', staff.isActive)
+    }
+    if (employee instanceof Manager) {
+      /* employeeがManagerの場合は50万を設定 */
+      console.log('OK, I will be pay salary to Manager.')
+      employee.salary = 500_000
+
+      /* Managerの固有情報を確認する場合はキャスト変換する */
+      const manager: Manager = employee as Manager
+      console.log('マネージャーの会社名', manager.companyName)
+    }
+  }
+}
+
+interface Human {
+  name: string
+  profile: string
+  salary: number
+  setData(name: string, profile: string): void
+}
+
+class Staff implements Human {
+  name: string
+  profile: string
+  salary: number
+  isActive: boolean
+  setData(name: string, profile: string) {
+    this.name = name
+    this.profile = profile
+    this.isActive = true
+  }
+}
+
+class Manager implements Human {
+  name: string
+  profile: string
+  companyName: string
+  salary: number
+  setData(name: string, profile: string) {
+    this.name = name
+    this.profile = profile
+  }
+  breakStaff(staff: Staff) {
+    staff.isActive = false
+  }
 }

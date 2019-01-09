@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "@types/node": "^10.12.18",
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "rxjs": "^6.3.3"
   },
   "devDependencies": {
     "typescript": "^3.2.2"
@@ -14,6 +15,8 @@
     "build": "node_modules/.bin/tsc",
     "start": "node build/app.js",
     "serve": "npm run build && npm run start",
+    "serve-async": "npm run build && node build/app_async.js",
+    "serve-rxjs": "npm run build && node build/app_rxjs.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "shohei",

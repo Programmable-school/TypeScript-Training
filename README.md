@@ -102,4 +102,23 @@ Hello! world.
 [Lesson](https://github.com/Programmable-school/TypeScript-Training/tree/master/src/lesson)<br>
 
 
+## Lessonコードを確認する
+本リポジトリをローカルPCへ取り込み、全Lessonのソースコード及び挙動を確認できます。
 
+```bash
+# TypeScript-Trainingをダウンロード
+$ git clone https://github.com/Programmable-school/TypeScript-Training.git
+$ cd TypeScript-Training/
+
+# packageをダウンロード
+$ npm install
+
+# Lessonコードをビルド＆実行
+$ npm run serve
+
+# 非同期処理のLessonを実行
+$ npm run serve-async
+
+# ReactiveXのLessonを実行
+$ npm run serve-rxjs
+```

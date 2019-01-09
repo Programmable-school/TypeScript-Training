@@ -7,11 +7,11 @@ import { Lesson_Static } from './lesson/Lesson_Static'
 import { Lesson_Inheritance } from './lesson/Lesson_Inheritance'
 import { Lesson_Interface } from './lesson/Lesson_Interface'
 import { Lesson_Generics } from './lesson/Lesson_Generics'
-import { Lesson_AsyncProcess } from './lesson/Lesson_AsyncProcess'
-import { Lesson_ReactiveX } from './lesson/Lesson_ReactiveX'
+
 
 /* Hello! World.を表示 */
 console.log('---- Lesson_HelloWorld ----')
+Lesson_HelloWorld()
 console.log('------------------\n')
 
 /* 変数 */
@@ -128,11 +128,3 @@ console.log('------------------\n')
 console.log('---- Lesson_Generics ----')
 Lesson_Generics()
 console.log('------------------\n')
-
-/* ReactiveX */
-console.log('---- Lesson_ReactiveX ----')
-Lesson_ReactiveX()
-console.log('------------------\n')
-
-/* 非同期処理 */
-Lesson_AsyncProcess()
