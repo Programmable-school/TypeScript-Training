@@ -25,10 +25,10 @@ export async function Lesson_ReactiveX() {
   // ■ Rxで値を加工する
   LessonRxProcess()
 
-  // ■ Rxでデータバインディングしてみる
+  // ■ Rxでデータバインディングのようなことをする
   LessonRxBinding()
 
-  // ■ RxでCallbackのようなことをする
+  // ■ RxでAPIのレスポンスを取得する
   LessonRxApiRequest()
   await sleep(sleepTime)
 
@@ -86,7 +86,7 @@ function LessonRxProcess() {
   })
 }
 
-// ■ Rxでデータバインディングしてみる
+// ■ Rxでデータバインディングのようなことをする
 function LessonRxBinding() {
   const o1: BehaviorSubject<number> = new BehaviorSubject(1)
   const o2: BehaviorSubject<string> = new BehaviorSubject('A')
@@ -129,7 +129,7 @@ function LessonRxBinding() {
   console.log(`RxBinding o1 ${o1.value}, o2 ${o2.value}`)   // RxBinding o1 5, o2 E
 }
 
-// ■ RxでCallbackのようなことをする
+// ■ RxでAPIのレスポンスを取得する
 function LessonRxApiRequest() {
   // ユーザー情報を取得
   LessonRxAPIClient(userDetailUrl).subscribe(
