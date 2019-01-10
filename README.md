@@ -36,21 +36,39 @@
 ├── README.md
 ├── package.json
 ├── src
-│   ├── app.ts
-│   ├── app_async.ts
-│   ├── app_rxjs.ts
-│   ├── lesson
-│   │   ├── Lesson.ts
-│   │   ├── Lesson_AsyncProcess.ts
-│   │   ├── Lesson_Class.ts
-│   │   ├── Lesson_Generics.ts
-│   │   ├── Lesson_Inheritance.ts
-│   │   ├── Lesson_Interface.ts
-│   │   ├── Lesson_ReactiveX.ts
-│   │   └── Lesson_Static.ts
-│   └── utils
-│       └── utils.ts
-├── tsconfig.json
+│   ├── app.ts
+│   ├── app_async.ts
+│   ├── app_rxjs.ts
+│   ├── lesson
+│   │   ├── Lesson_AndOr.ts
+│   │   ├── Lesson_Array.ts
+│   │   ├── Lesson_AssociativeArray.ts
+│   │   ├── Lesson_AsyncProcess.ts
+│   │   ├── Lesson_Calc.ts
+│   │   ├── Lesson_Cast.ts
+│   │   ├── Lesson_Class.ts
+│   │   ├── Lesson_Compare.ts
+│   │   ├── Lesson_Date.ts
+│   │   ├── Lesson_Enum.ts
+│   │   ├── Lesson_For.ts
+│   │   ├── Lesson_Function.ts
+│   │   ├── Lesson_Generics.ts
+│   │   ├── Lesson_HelloWorld.ts
+│   │   ├── Lesson_If.ts
+│   │   ├── Lesson_Inheritance.ts
+│   │   ├── Lesson_Interface.ts
+│   │   ├── Lesson_LetConst.ts
+│   │   ├── Lesson_ListOperation.ts
+│   │   ├── Lesson_Math.ts
+│   │   ├── Lesson_Optional.ts
+│   │   ├── Lesson_PriAny.ts
+│   │   ├── Lesson_ReactiveX.ts
+│   │   ├── Lesson_Static.ts
+│   │   ├── Lesson_Switch.ts
+│   │   └── Lesson_While.ts
+│   └── utils
+│       └── utils.ts
+└── tsconfig.json
 ```
 
 ### 手順
