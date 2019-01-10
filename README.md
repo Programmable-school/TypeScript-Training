@@ -10,7 +10,7 @@
 - [配列](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson.ts)
 - [連想配列](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson.ts)
 - [リスト操作](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson.ts)
-- [if分（条件判断](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson.ts)
+- [if分（条件判断）](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson.ts)
 - [比較演算子](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson.ts)
 - [AND・OR, 三項演算子](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson.ts)
 - [switch文（条件判断）](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson.ts)
