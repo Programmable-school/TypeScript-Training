@@ -37,7 +37,6 @@ const userDetailUrl: string = `https://qiita.com/api/v2/users/${userName}`
   catchError: pip内で発生したエラーをキャッチ
 */
 
-
 export async function Lesson_ReactiveX() {
   console.log('---- Lesson_ReactiveX ----')
   const sleepTime: number = 1000 // 順番にコールするために待ち合わせする

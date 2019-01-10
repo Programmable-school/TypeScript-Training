@@ -1,8 +1,23 @@
-import { Lesson_HelloWorld, Lesson_LetConst, Lesson_PriAny, Lesson_Optional, Lesson_Calc, 
-  Lesson_Array, Lesson_AssociativeArray, Lesson_ListOperation, Lesson_If, Lesson_Compare, Lesson_AndOr, 
-  Lesson_Switch, Lesson_While, Lesson_For, Lesson_Function, Lesson_Enum, Lesson_Cast, Lesson_Math, Lesson_Date } from './lesson/Lesson'
-
+import { Lesson_HelloWorld } from './lesson/Lesson_HelloWorld'
+import { Lesson_LetConst } from './lesson/Lesson_LetConst'
+import { Lesson_Function } from './lesson/Lesson_Function'
+import { Lesson_PriAny } from './lesson/Lesson_PriAny'
+import { Lesson_Optional } from './lesson/Lesson_Optional'
+import { Lesson_Calc } from './lesson/Lesson_Calc'
+import { Lesson_Array } from './lesson/Lesson_Array'
+import { Lesson_AssociativeArray } from './lesson/Lesson_AssociativeArray'
+import { Lesson_ListOperation } from './lesson/Lesson_ListOperation'
+import { Lesson_If } from './lesson/Lesson_If'
+import { Lesson_Compare } from './lesson/Lesson_Compare'
+import { Lesson_AndOr } from './lesson/Lesson_AndOr'
+import { Lesson_Switch } from './lesson/Lesson_Switch'
+import { Lesson_While } from './lesson/Lesson_While'
+import { Lesson_For } from './lesson/Lesson_For'
+import { Lesson_Enum } from './lesson/Lesson_Enum'
 import { Lesson_Class } from './lesson/Lesson_Class'
+import { Lesson_Cast } from './lesson/Lesson_Cast'
+import { Lesson_Math } from './lesson/Lesson_Math'
+import { Lesson_Date } from './lesson/Lesson_Date'
 import { Lesson_Static } from './lesson/Lesson_Static'
 import { Lesson_Inheritance } from './lesson/Lesson_Inheritance'
 import { Lesson_Interface } from './lesson/Lesson_Interface'
@@ -17,6 +32,11 @@ console.log('------------------\n')
 /* 変数 */
 console.log('---- Lesson_LetConst ----')
 Lesson_LetConst()
+console.log('------------------\n')
+
+/* 関数 */
+console.log('---- Lesson_Function ----')
+Lesson_Function()
 console.log('------------------\n')
 
 /* プリミティブ型、Any型 */
@@ -77,11 +97,6 @@ console.log('------------------\n')
 /* for文（繰り返し） */
 console.log('---- Lesson_For ----')
 Lesson_For()
-console.log('------------------\n')
-
-/* 関数 */
-console.log('---- Lesson_Function ----')
-Lesson_Function()
 console.log('------------------\n')
 
 /* Enum */
