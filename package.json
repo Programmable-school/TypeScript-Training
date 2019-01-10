@@ -16,7 +16,7 @@
     "start": "node build/app.js",
     "serve": "npm run build && npm run start",
     "serve-async": "npm run build && node build/app_async.js",
-    "serve-rxjs": "npm run build && node build/app_rxjs.js", 
+    "serve-rxjs": "npm run build && node build/app_rxjs.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "shohei",
