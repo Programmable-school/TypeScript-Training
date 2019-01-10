@@ -46,7 +46,7 @@ function LessonCallback() {
     userListUrlとuserDetailUrlをリクエストしてデータを取得する
     APIのURLとAPIから取得したデータを通知してほしい関数（コールバック関数）を指定する
   */
-  // ■ userListUrlをリクエスト
+  // ユーザリストとユーザー情報を取得
   LessonCallbackAPIClient(userListUrl, (result?: any, error?: Error) => {
     // この中がコールバック関数. 外部との通信が終わると呼ばれる
     if (error) {
@@ -56,8 +56,7 @@ function LessonCallback() {
     if (result) {
       console.log('LessonCallback userList', result.data.length) // LessonCallback userList 20
     }
-
-    // ■ userDetailUrlをリクエスト
+    
     LessonCallbackAPIClient(userDetailUrl, (result?: any, error?: Error) => {
       if (error) {
         console.error('LessonCallback userDetail error', error)
@@ -75,7 +74,6 @@ function LessonCallback() {
 }
 
 function LessonCallbackAPIClient(url: string, callback: (result?: any, error?: Error) => void) {
-  // axiosで外部（GitHub API）と通信する
   axios.get(url)
     .then((result: any) => {
       callback(result, undefined)
@@ -86,11 +84,10 @@ function LessonCallbackAPIClient(url: string, callback: (result?: any, error?: E
 
 // ■ Promise
 function LessonPromise() {
-  // ■ userListUrlをリクエスト
+  // ユーザリストとユーザー情報を取得
   LessonPromiseAPIClient(userListUrl)
     .then((result: any) => {
       console.log('LessonPromise userList', result.data.length)   // LessonPromise userList 20
-      // ■ userDetailUrlをリクエスト
       return LessonPromiseAPIClient(userDetailUrl)
     }).catch((error: Error) => {
       console.error('error', error)
@@ -119,11 +116,12 @@ function LessonPromiseAPIClient(url: string)  {
 // ■ Async/Await
 async function LessonAsyncAwait() {
   try {
-    const result1 = await axios.get(userListUrl)            // ユーザーリストを取得
+    // ユーザーリストを取得して１番目のユーザーの情報を取得する
+    const result1 = await axios.get(userListUrl)            
     const id: string = result1.data[0].id
     console.log('LessonAsyncAwait', id)
 
-    const result2 = await axios.get(userListUrl + `/${id}`) // ユーザー情報を取得
+    const result2 = await axios.get(userListUrl + `/${id}`)
     console.log('LessonAsyncAwait', id, result2.data.profile_image_url)
     /* 
       Async/Awaitを利用する場合
