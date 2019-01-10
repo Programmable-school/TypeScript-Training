@@ -1,7 +1,10 @@
 /* ReactiveX */
 /*
-    予めrxjsをインストール
+    # ReactiveXのJavaScript版のrxjsをインストール
     $ npm install --save rxjs
+
+    # HTTPクライアントのaxiosをインストール
+    $ npm install --save axios
  */
 // RxJSをインポートする
 import { from, BehaviorSubject, Observable, zip, empty } from 'rxjs'

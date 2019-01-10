@@ -3,10 +3,10 @@
   データの受け渡しやメンバ・メソッドを規約したいときに用いる
 */
 export function Lesson_Interface() {
-
-  const newEmployee1: NewEmployeeDTO = { name: 'Yamada', score: 100, jobType: JobType.Marketer }
-  const newEmployee2: NewEmployeeDTO = { name: 'Tanaka', score: 200, jobType: JobType.Engneer }
-  const newEmployee3: NewEmployeeDTO = { name: 'Koike',  score: 300, jobType: JobType.Engneer }
+  // データ受け渡し用にインターフェースでデータセット
+  const newEmployee1: NewEmployeeDTO = { name: 'Yamada', score: 100 }
+  const newEmployee2: NewEmployeeDTO = { name: 'Tanaka', score: 200 }
+  const newEmployee3: NewEmployeeDTO = { name: 'Koike',  score: 300 }
 
   const result1: JobOfferResultPass | JobOfferResultFailure = judgementJobOffer(newEmployee1)
   const result2: JobOfferResultPass | JobOfferResultFailure = judgementJobOffer(newEmployee2)
@@ -16,15 +16,9 @@ export function Lesson_Interface() {
   console.log(result3)  // { name: 'Koike',  isJudgement: true,  comment: '内定！', ceremony: 'Tue Oct 01 2019 10:00:00 GMT+0900 (JST)' }
 }
 
-enum JobType {
-  Marketer,
-  Engneer,
-}
-
 interface NewEmployeeDTO {
   name: string
   score: number
-  jobType: JobType
 }
 
 // 採用結果のインターフェース（規約）

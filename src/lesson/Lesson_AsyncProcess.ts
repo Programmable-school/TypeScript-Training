@@ -1,6 +1,6 @@
 /* 非同期処理 */
 /*
-    予めaxiosをインストール
+    # HTTPクライアントのaxiosをインストール
     $ npm install --save axios
 
     Qiita APIを使ってデータを取得する

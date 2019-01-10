@@ -109,7 +109,7 @@ console.log('---- Lesson_Date ----')
 Lesson_Date()
 console.log('------------------\n')
 
-/* static 静的 */
+/* static */
 console.log('---- Lesson_Static ----')
 Lesson_Static()
 console.log('------------------\n')
