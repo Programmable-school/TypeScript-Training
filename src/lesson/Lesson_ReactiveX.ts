@@ -27,6 +27,17 @@ const userName: string = 'hukusuke1007' // 自分のアカウントを設定
 const userListUrl: string = 'https://qiita.com/api/v2/users'
 const userDetailUrl: string = `https://qiita.com/api/v2/users/${userName}`
 
+/*
+  Observable: ストリーム（データを流す通路）
+  BehaviorSubject: 最後のデータを保持する。onNextで新しいデータを流し、subscribeとvalueでデータを取得できる
+  from: 引数に指定されたデータのObservableを生成
+  zip: 複数のObservableから流れてきたデータを組み合わせて単一のデータにする
+  empty: 何のデータを持っていないObservableを生成
+  map: pip内で使えるmap。機能はリスト操作のmapと同じ
+  catchError: pip内で発生したエラーをキャッチ
+*/
+
+
 export async function Lesson_ReactiveX() {
   console.log('---- Lesson_ReactiveX ----')
   const sleepTime: number = 1000 // 順番にコールするために待ち合わせする
