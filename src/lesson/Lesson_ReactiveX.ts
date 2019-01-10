@@ -1,5 +1,11 @@
 /* ReactiveX */
 /*
+    ・公式サイト
+    http://reactivex.io/
+
+    ・Github
+    https://github.com/ReactiveX/rxjs
+    
     # ReactiveXのJavaScript版のrxjsをインストール
     $ npm install --save rxjs
 
@@ -7,7 +13,7 @@
     $ npm install --save axios
  */
 // RxJSをインポートする
-import { from, BehaviorSubject, Observable, zip, empty } from 'rxjs'
+import { Observable, BehaviorSubject, from, zip, empty } from 'rxjs'
 import { map, catchError } from 'rxjs/operators'
 
 import axios, { AxiosResponse } from 'axios' 
@@ -47,6 +53,10 @@ export async function Lesson_ReactiveX() {
 
 // ■ Rxで値を加工する
 function LessonRxProcess() {
+  /* 
+    Observable = ストリーム（データを流せれる通路）
+    subscribeをするとデータをストリームへ流して処理できる
+  */
   const o1: Observable<number> = from([1, 2, 3, 4, 5])
   const o2: Observable<string> = from(['A', 'B', 'C', 'D', 'E'])
 
@@ -80,7 +90,7 @@ function LessonRxProcess() {
     console.log('RxProcess o3', value) // RxProcess o3 [ 2, 4, 6, 8, 10 ] ... RxProcess o3 [ 'AA', 'BB', 'CC', 'DD', 'EE' ] の順に表示される
   })
 
-  // o1とo2の値を連結してストリームへ流す
+  // o1とo2の値を結合してストリームへ流す
   const o4: Observable<string> = zip(o1, o2).pipe(
     map(([o1Value, o2Value]) => `${o2Value}: ${o1Value}`)
   )
