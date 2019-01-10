@@ -29,7 +29,50 @@
 - [非同期処理](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson_AsyncProcess.ts)
 - [ReactiveX](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson_ReactiveX.ts)
 
-## 手順
+## Lessonコードを動かす
+本リポジトリをローカルPCへ取り込み、全Lessonのソースコード及び挙動を確認できます。
+```bash
+├── LICENSE
+├── README.md
+├── package.json
+├── src
+│   ├── app.ts
+│   ├── app_async.ts
+│   ├── app_rxjs.ts
+│   ├── lesson
+│   │   ├── Lesson.ts
+│   │   ├── Lesson_AsyncProcess.ts
+│   │   ├── Lesson_Class.ts
+│   │   ├── Lesson_Generics.ts
+│   │   ├── Lesson_Inheritance.ts
+│   │   ├── Lesson_Interface.ts
+│   │   ├── Lesson_ReactiveX.ts
+│   │   └── Lesson_Static.ts
+│   └── utils
+│       └── utils.ts
+├── tsconfig.json
+```
+
+### 手順
+```bash
+# TypeScript-Trainingをダウンロード
+$ git clone https://github.com/Programmable-school/TypeScript-Training.git
+$ cd TypeScript-Training/
+
+# packageをダウンロード
+$ npm install
+
+# Lessonコードをビルド＆実行
+$ npm run serve
+
+# 非同期処理のLessonを実行
+$ npm run serve-async
+
+# ReactiveXのLessonを実行
+$ npm run serve-rxjs
+```
+
+## 学習
 nodeとnpmをインストールしてから以下の手順に従って環境構築してください。
 
 ### 環境構築
@@ -127,47 +170,3 @@ Hello! world.
 コンテンツ準備中のため、<br>
 直接ソースコードを見て写経して学習してください。<br>
 [Lesson](https://github.com/Programmable-school/TypeScript-Training/tree/master/src/lesson)<br>
-
-
-## Lessonコードを確認する
-本リポジトリをローカルPCへ取り込み、全Lessonのソースコード及び挙動を確認できます。
-```bash
-├── LICENSE
-├── README.md
-├── package.json
-├── src
-│   ├── app.ts
-│   ├── app_async.ts
-│   ├── app_rxjs.ts
-│   ├── lesson
-│   │   ├── Lesson.ts
-│   │   ├── Lesson_AsyncProcess.ts
-│   │   ├── Lesson_Class.ts
-│   │   ├── Lesson_Generics.ts
-│   │   ├── Lesson_Inheritance.ts
-│   │   ├── Lesson_Interface.ts
-│   │   ├── Lesson_ReactiveX.ts
-│   │   └── Lesson_Static.ts
-│   └── utils
-│       └── utils.ts
-├── tsconfig.json
-```
-
-### 手順
-```bash
-# TypeScript-Trainingをダウンロード
-$ git clone https://github.com/Programmable-school/TypeScript-Training.git
-$ cd TypeScript-Training/
-
-# packageをダウンロード
-$ npm install
-
-# Lessonコードをビルド＆実行
-$ npm run serve
-
-# 非同期処理のLessonを実行
-$ npm run serve-async
-
-# ReactiveXのLessonを実行
-$ npm run serve-rxjs
-```
