@@ -2,11 +2,6 @@
 
 > 初心者向け TypeScript入門トレーニング。
 
-| | |
-|---|---|
-|オススメの対象者|このトレーニングは、WEB系のエンジニアを目指す方にオススメです。WEBではHTML, CSS, JavaScriptが基礎として必要ですが、近年状況が変化し**Vue**や**React**などのフレームワークを使うことが一般的になってきました。また、フレームワークの言語もJavaScriptからTypeScriptへの移行しつつあります。 このトレーニングを行うことで先端の開発で利用されいる知識を得ることが可能です。| 
-|トレーニングに必要な知識|このトレーニングを進めていくには、Gitとコマンドラインの知識が必要になります。|
-
 ## 目次
 - [環境構築](https://github.com/Programmable-school/TypeScript-Training#%E6%89%8B%E9%A0%86)
 - [Hello! World.を表示](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson_HelloWorld.ts)
@@ -36,58 +31,56 @@
 - [非同期処理](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson_AsyncProcess.ts)
 - [ReactiveX](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson_ReactiveX.ts)
 
+## 学習
+それではコード書いて学習していきましょう。<br>
+TypeScriptを実行できる環境を構築し、目次の順番にコードを写経しています。<br>
 
-## 環境構築
-
-このレッスンを進めるための手順を説明します。
-
-**node.jsをインストール**
-
-TypeScriptの学習はnode環境を使って行います。まずは[https://nodejs.org/en/](https://nodejs.org/en/)からnodeをダウンロードしインストールしてください。
-
-**トレーニングをclone**
-
-次に、このページをcloneしてください。
-
+### 環境構築
+あなたのパソコンのコマンドターミナルを立ち上げ、以下の手順で環境を構築します。<br>
 ```bash
-# TypeScript-Trainingをダウンロード
-$ git clone https://github.com/Programmable-school/TypeScript-Training.git
-$ cd TypeScript-Training/
+# ディレクトリ作成して移動
+$ mkdir beginner_lesson
+$ cd beginner_lesson
 
-# packageをダウンロード
-$ npm install
+# pacage.json作成
+$ npm init -y
+
+# TypeScriptと型定義ファイルをインストール
+$ npm install --save-dev typescript
+$ npm install --save @types/node
+
+# ソースコードを保管するディレクトリを作成
+$ mkdir src
+
+# ビルドしたJavaScriptファイルを保管するディレクトリを作成
+$ mkdir build
+```
+エディタでpackage.jsonを開きます。scriptsにbuildとstartのショートカットコマンドを追加します。
+```json
+  "scripts": {
+    "build": "node_modules/.bin/tsc",
+    "start": "node build/app.js",
+    "serve": "npm run build && npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
 ```
 
-トレーニングでは以下のディレクトリ構成に注目してください。
-```bash
-├── package-lock.json
-├── package.json
-├── src
-│   ├── app.ts
-│   ├── training
-│   │   └── HelloWorld.ts
-└── tsconfig.json
+エディタを用いてtsconfig.jsonを作成します。
+内容は以下のコードを記載し保存します。
+```json
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "sourceMap": true,
+    "types": ["node"],
+    "outDir": "./build/"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
 ```
-
-**package.json**
-
-ファイルの依存関係を示すファイルです。`npm install`ではこのファイルの`dependencies`や`devDependencies`に記載された内容を`/node_modules`にインストールします。
-
-**package-lock.json**
-
-ファイルの依存関係を固定するためのファイルです。実開発では利用しているライブラリのバージョンが上がってしまうことで、互換性がなくなり開発中のソースコードも動かなくなることがあります。それを防止するためnodeではバージョンを記録するためpackage-lock.jsonが作られます。
-
-**/src**
-
-今回ソースコードを記述していくディレクトリです。`app.ts`と`/training`の中に新しいコードやファイルを追加していき学習していきましょう。
-
-**tsconfig.json**
-
-TypeScriptの設定ファイルです。このファイルを変更することでTypeScriptの振舞いを変更することができます。
-このトレーニングではこのファイルについては触れません。
-
-
-## トレーニングを始める
 
 ### Hello! world.を表示する
 src配下にapp.tsを作成し、エディタで以下のコードを実装して保存します。
@@ -113,12 +106,79 @@ Hello! world.
 ```
 無事、表示されました。
 
-また、serveを使えば1回でビルドと実行をしてくれます。
+また、先ほどscriptsに追加したserveを使えば1回でビルドと実行をしてくれます。
 ```bash
 # ビルド後に実行
 $ npm run serve
 Hello! world.
 ```
+おめでとうございます。環境構築からHelo! world.を表示させることができました。<br>
 
-それでは実際にコードを書いてTypeScriptを学習していきましょう。<br>
-[次のLessonへ](./src/README.md)<br>
+### 変数と定数 〜 ReactiveX
+[目次](#目次)に沿って学習していきます。<br>
+ソースコードに書かれている通りに写経し、どのように動作するのかconsole.logを使って確認していきましょう。<br>
+[Lesson](https://github.com/Programmable-school/TypeScript-Training/tree/master/src/lesson)<br>
+
+## 答え合わせ
+本リポジトリをローカルPCへ取り込み、全Lessonのソースコード及び挙動を確認できます。<br>
+あなたが写経したコードの答え合わせができます。<br>
+```bash
+├── LICENSE
+├── README.md
+├── package.json
+├── src
+│   ├── app.ts
+│   ├── app_async.ts
+│   ├── app_rxjs.ts
+│   ├── lesson
+│   │   ├── Lesson_AndOr.ts
+│   │   ├── Lesson_Array.ts
+│   │   ├── Lesson_AssociativeArray.ts
+│   │   ├── Lesson_AsyncProcess.ts
+│   │   ├── Lesson_Calc.ts
+│   │   ├── Lesson_Cast.ts
+│   │   ├── Lesson_Class.ts
+│   │   ├── Lesson_Compare.ts
+│   │   ├── Lesson_Date.ts
+│   │   ├── Lesson_Enum.ts
+│   │   ├── Lesson_For.ts
+│   │   ├── Lesson_Function.ts
+│   │   ├── Lesson_Generics.ts
+│   │   ├── Lesson_HelloWorld.ts
+│   │   ├── Lesson_If.ts
+│   │   ├── Lesson_Inheritance.ts
+│   │   ├── Lesson_Interface.ts
+│   │   ├── Lesson_LetConst.ts
+│   │   ├── Lesson_ListOperation.ts
+│   │   ├── Lesson_Math.ts
+│   │   ├── Lesson_Optional.ts
+│   │   ├── Lesson_PriAny.ts
+│   │   ├── Lesson_ReactiveX.ts
+│   │   ├── Lesson_Static.ts
+│   │   ├── Lesson_Switch.ts
+│   │   └── Lesson_While.ts
+│   └── utils
+│       └── utils.ts
+└── tsconfig.json
+```
+
+以下の手順で実行してください。<br>
+```bash
+# TypeScript-Trainingをダウンロード
+$ git clone https://github.com/Programmable-school/TypeScript-Training.git
+$ cd TypeScript-Training/
+
+# packageをダウンロード
+$ npm install
+
+# Lessonコードをビルド＆実行
+$ npm run serve
+
+# 非同期処理のLessonを実行
+$ npm run serve-async
+
+# ReactiveXのLessonを実行
+$ npm run serve-rxjs
+```
+
+以上です。
