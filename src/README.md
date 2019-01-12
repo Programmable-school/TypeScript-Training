@@ -32,7 +32,6 @@
 - [ReactiveX](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson_ReactiveX.ts)
 
 ## 学習
-それではコード書いて学習していきましょう。<br>
 TypeScriptを実行できる環境を構築し、目次の順番にコードを写経しています。<br>
 
 ### 環境構築
