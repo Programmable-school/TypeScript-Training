@@ -4,19 +4,19 @@
 */
 export function Lesson_Interface() {
   // データ受け渡し用にインターフェースでデータセット
-  const newEmployee1: NewEmployeeDTO = { name: 'Yamada', score: 100 }
-  const newEmployee2: NewEmployeeDTO = { name: 'Tanaka', score: 200 }
-  const newEmployee3: NewEmployeeDTO = { name: 'Koike',  score: 300 }
+  const student1: StudentDTO = { name: 'Yamada', score: 100 }
+  const student2: StudentDTO = { name: 'Tanaka', score: 200 }
+  const student3: StudentDTO = { name: 'Koike',  score: 300 }
 
-  const result1: JobOfferResultPass | JobOfferResultFailure = judgementJobOffer(newEmployee1)
-  const result2: JobOfferResultPass | JobOfferResultFailure = judgementJobOffer(newEmployee2)
-  const result3: JobOfferResultPass | JobOfferResultFailure = judgementJobOffer(newEmployee3)
+  const result1: JobOfferResultPass | JobOfferResultFailure = judgementJobOffer(student1)
+  const result2: JobOfferResultPass | JobOfferResultFailure = judgementJobOffer(student2)
+  const result3: JobOfferResultPass | JobOfferResultFailure = judgementJobOffer(student3)
   console.log(result1)  // { name: 'Yamada', isJudgement: false, comment: '不合格', isOinoriEmail: true }
   console.log(result2)  // { name: 'Tanaka', isJudgement: true,  comment: '内定！', ceremony: 'Tue Oct 01 2019 10:00:00 GMT+0900 (JST)' }
   console.log(result3)  // { name: 'Koike',  isJudgement: true,  comment: '内定！', ceremony: 'Tue Oct 01 2019 10:00:00 GMT+0900 (JST)' }
 }
 
-interface NewEmployeeDTO {
+interface StudentDTO {
   name: string
   score: number
 }
@@ -46,10 +46,10 @@ class JobOfferResultFailure implements JobOfferResultDTO {
   isOinoriEmail: boolean            // お祈りメール送信フラグ
 }
 
-function judgementJobOffer(newEmployee: NewEmployeeDTO): JobOfferResultPass | JobOfferResultFailure {
-  if (newEmployee.score >= 200) {
+function judgementJobOffer(student: StudentDTO): JobOfferResultPass | JobOfferResultFailure {
+  if (student.score >= 200) {
     const resultDTO: JobOfferResultPass = {
-      name: newEmployee.name,
+      name: student.name,
       isJudgement: true,
       comment: '内定！',
       ceremony: new Date('2019/10/1 10:00:00').toString()
@@ -57,7 +57,7 @@ function judgementJobOffer(newEmployee: NewEmployeeDTO): JobOfferResultPass | Jo
     return resultDTO
   } else {
     const resultDTO: JobOfferResultFailure = {
-      name: newEmployee.name,
+      name: student.name,
       isJudgement: false,
       comment: '不合格',
       isOinoriEmail: true
