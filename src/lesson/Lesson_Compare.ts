@@ -7,28 +7,33 @@ export function Lesson_Compare() {
   }
 
   if (variable !== 1) {
-    console.log('Case ===', 'variableは1以外です。')     // ※ココは通らない
+    // ※ココは通らない
+    console.log('Case !==', 'variableは1以外です。')     
   }
 
   if (variable > 1) {
-    console.log('Case >', 'variableは1以上です。')       // ※ココは通らない
+    // ※ココは通らない
+    console.log('Case >', 'variableは1以上です。')
   } else {
     console.log('Case >', 'variableは1含め1以下です。')   // Case >= variableは1含め1以上です。
   }
   if (variable >= 1) {
     console.log('Case >=', 'variableは1含め1以上です。')  // Case >= variableは1含め1以上です。
   } else {
-    console.log('Case >=', 'variableは1以下です。')      // ※ココは通らない
+    // ※ココは通らない
+    console.log('Case >=', 'variableは1以下です。')
   }
 
   if (variable < 1) {
-    console.log('Case <', 'variableは1以下です。')       // ※ココは通らない
+    // ※ココは通らない
+    console.log('Case <', 'variableは1以下です。')
   } else {
     console.log('Case <', 'variableは1含め1以上です。')   // Case < variableは1含め1以上です。
   }
   if (variable <= 1) {
     console.log('Case <=', 'variableは1含め1以下です。')  // Case <= variableは1含め1以下です。
   } else {
-    console.log('Case <=', 'variableは1以上です。')      // ※ココは通らない
+    // ※ココは通らない
+    console.log('Case <=', 'variableは1以上です。')
   }
 }

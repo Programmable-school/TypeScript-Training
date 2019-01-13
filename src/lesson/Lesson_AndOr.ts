@@ -7,13 +7,15 @@ export function Lesson_AndOr() {
   if (isActive && age === 20) {
     console.log('AND', 'isActiveとageは一致')  // AND isActiveとageは一致
   } else {
-    console.log('AND', '一致しない')           // ※ココは通らない
+    // ※ココは通らない
+    console.log('AND', '一致しない')
   }
 
   if (isActive || age === 30) {
-    console.log('OR', `isActiveだけ一致`)      // OR isActiveだけ一致
+    console.log('OR', 'isActiveだけ一致')      // OR isActiveだけ一致
   } else {
-    console.log('OR', '一致しない')            // ※ココは通らない
+    // ※ココは通らない
+    console.log('OR', '一致しない')
   }
 
   // 書き方2 三項演算子
