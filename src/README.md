@@ -171,13 +171,13 @@ $ cd TypeScript-Training/
 $ npm install
 
 # Lessonコードをビルド＆実行
-$ npm run serve
+$ npm run lesson
 
 # 非同期処理のLessonを実行
-$ npm run serve-async
+$ npm run lesson-async
 
 # ReactiveXのLessonを実行
-$ npm run serve-rxjs
+$ npm run lesson-rxjs
 ```
 
 以上です。
