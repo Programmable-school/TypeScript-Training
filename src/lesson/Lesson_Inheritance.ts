@@ -1,5 +1,4 @@
-/* 継承 */
-/* 
+/* 継承
   共通のメンバ・メソッドがある場合は親クラス（スーパークラス）を作成し、
   親クラスを継承する子クラス（サブクラス）を用意することで子クラスは親クラスの持ち物を利用できる。
   
@@ -33,13 +32,16 @@ export function Lesson_Inheritance() {
   // employee1.asset      // 呼ぶことはできない
   
 }
-
+/**
+ * スーパークラス
+ * override及びサブクラス化できる。
+ */
 class CompanyEmployee {
-  public companyName: string	            // 会社名
-  public companyTel: string	              // 会社の電話番号
-  public employeeId: number	              // 社員ID
-  protected asset: number	                // 会社の資産
-  private hesokuri: number                // 会社のへそくり
+  companyName: string	            // 会社名
+  companyTel: string	            // 会社の電話番号
+  employeeId: number	            // 社員ID
+  protected asset: number	        // 会社の資産
+  private hesokuri: number        // 会社のへそくり
   constructor() {
     this.companyName = 'Develop Inc.'
     this.companyTel = "0120000000"
@@ -47,7 +49,7 @@ class CompanyEmployee {
     this.hesokuri = 1
   }
 
-  public getCompanyInfo() {
+  getCompanyInfo() {
     return {
       name: this.companyName,
       tel: this.companyTel
@@ -55,11 +57,15 @@ class CompanyEmployee {
   }
 
   // 社員IDが0（社長）だけ教える
-  public getHesokuri(id: number): string {
+  getHesokuri(id: number): string {
     return id === 0 ? `会社のへそくりは　${this.hesokuri}円` : '社長じゃないから分からない'
   }
 }
 
+/**
+ * サブクラス
+ * CompanyEmployeeを継承する。
+ */
 class Employee extends CompanyEmployee {
   name: string
   profile: string
