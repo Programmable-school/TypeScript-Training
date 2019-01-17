@@ -8,14 +8,18 @@ export function Lesson_Interface() {
   const student2: StudentDTO = { name: 'Tanaka', score: 200 }
   const student3: StudentDTO = { name: 'Koike',  score: 300 }
 
+  // 内定ジャッジメント
   const result1: JobOfferResultPass | JobOfferResultFailure = judgementJobOffer(student1)
   const result2: JobOfferResultPass | JobOfferResultFailure = judgementJobOffer(student2)
   const result3: JobOfferResultPass | JobOfferResultFailure = judgementJobOffer(student3)
+
+  // 合否を表示
   console.log(result1)  // { name: 'Yamada', isJudgement: false, comment: '不合格', isOinoriEmail: true }
   console.log(result2)  // { name: 'Tanaka', isJudgement: true,  comment: '内定！', ceremony: 'Tue Oct 01 2019 10:00:00 GMT+0900 (JST)' }
   console.log(result3)  // { name: 'Koike',  isJudgement: true,  comment: '内定！', ceremony: 'Tue Oct 01 2019 10:00:00 GMT+0900 (JST)' }
 }
 
+// 学生インターフェース
 interface StudentDTO {
   name: string
   score: number
@@ -52,7 +56,7 @@ function judgementJobOffer(student: StudentDTO): JobOfferResultPass | JobOfferRe
       name: student.name,
       isJudgement: true,
       comment: '内定！',
-      ceremony: new Date('2019/10/1 10:00:00').toString()
+      ceremony: '2019/10/1 10:00:00'
     }
     return resultDTO
   } else {
