@@ -81,7 +81,7 @@ function LessonRxProcess() {
     console.log('RxProcess o1', value)    // RxProcess o1 2 ... RxProcess o1 10 の順に表示される
   })
 
-  // o1からo2へ順番にストーリムへ流す
+  // list1からlist2へ順番にストーリムへ流す
   const list1: number[] = [1, 2, 3, 4, 5]
   const list2: string[] = ['A', 'B', 'C', 'D', 'E']
   const o3: Observable<number[] | string[]> = from([list1, list2]).pipe(
@@ -136,7 +136,7 @@ function LessonRxBinding() {
   })
 
   /* 
-    onNextでsubscribeで値を取得できる。
+    nextでsubscribeで値を取得できる。
     subscribe内に処理を書けばo1の値によってユニークな処理を実現できる。
   */
   o1.next(2)
