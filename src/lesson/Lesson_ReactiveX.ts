@@ -18,6 +18,7 @@ import { map, catchError } from 'rxjs/operators'
 
 import axios, { AxiosResponse } from 'axios' 
 import { sleep } from '../utils/utils'
+import { request } from 'http';
 
 // Qiita APIのURLを定義
 /*
@@ -58,8 +59,14 @@ export async function Lesson_ReactiveX() {
   // ■ RxでAsync/Awaitのようなことをする
   LessonRxAsyncAwait()
   await sleep(sleepTime)
+
+  // ■ RxでViewがViewModelのデータを監視する
+  const view = new View()
+  view.run()
+
   console.log('------------------\n')
 }
+
 
 // ■ Rxで値を加工する
 function LessonRxProcess() {
@@ -197,7 +204,38 @@ function LessonRxAsyncAwait() {
   })
 }
 
-
 function LessonRxAPIClient(url: string)  {
   return from(axios.get(url))
+}
+
+class View {
+  viewModel: ViewModel
+  constructor() {
+    this.viewModel = new ViewModel()
+    this.configure()
+  }
+
+  configure() {
+    /**
+     * 購読する
+     */
+    this.viewModel.data.subscribe((value: string) => {
+      console.log('subscribe', value) 
+    })
+  }
+
+  run() {
+    this.viewModel.request()
+  }
+}
+
+class ViewModel {
+  data: BehaviorSubject<string> = new BehaviorSubject('noData')
+  request() {
+    /**
+     * ここで外部からデータを取得し、nextでデータを流す。
+     */
+    const result = 'updateData'
+    this.data.next(result)
+  }
 }
