@@ -185,7 +185,7 @@ $ npm run lesson-rxjs
 
 ## 課題
 ### 課題 1
-足し算、引き残、掛け算、割り算を計算する関数を作ってください。
+足し算、引き算、掛け算、割り算する関数を実装してください。
 
 
 ```typescript
@@ -199,7 +199,7 @@ $ npm run lesson-rxjs
 function calc(a: number, b: number, type: CalcType): number
 ```
 ### 課題 2
-配列の値を指定された倍数分掛け算した配列にして返す関数を作ってください。
+配列の値を指定された倍数分掛け算した配列にして返す関数を実装してください。
 <br>
 
 ```typescript
@@ -213,7 +213,96 @@ function multiple(nums: number[], multiple: number): number[]
 ```
 
 ### 課題 3
-以下の文字列から任意の文字列が含まれていれば true を返す関数を作ってください。
+以下の*をコンソール上に描画する関数を実装してください。
+
+
+```typescript
+// isReverse: false
+*
+**
+***
+****
+*****
+
+// isReverse: true
+*****
+****
+***
+**
+*
+```
+
+```typescript
+/**
+ *  * を描画する
+ *  @param {number} size *の最大個数
+ *  @param {boolean} isReverse true:*が多い順に表示, false：*が少ない順に表示
+ *  @return {void}
+ */
+function drawAsterisk1(size: number, isReverse: boolean)
+```
+
+### 課題 4
+以下の*をコンソール上に描画する関数を実装してください。
+
+```typescript
+// isReverse: false
+    *
+   **
+  ***
+ ****
+*****
+
+// isReverse: true
+*****
+ ****
+  ***
+   **
+    *
+```
+
+```typescript
+/**
+ *  * を描画する
+ *  @param {number} size *の最大個数
+ *  @param {boolean} isReverse true:*が多い順に表示, false：*が少ない順に表示
+ *  @return {void}
+ */
+function drawAsterisk2(size: number, isReverse: boolean)
+```
+### 課題 5
+以下の*をコンソール上に描画する関数を実装してください。
+
+
+```typescript
+// isReverse: false
+*
+ *
+  *
+   *
+    *
+
+// isReverse: true
+    *
+   *
+  *
+ *
+*
+```
+
+```typescript
+/**
+ *  * を描画する
+ *  @param {number} size *の個数
+ *  @param {boolean} isReverse true:*が多い順に表示, false：*が少ない順に表示
+ *  @return {void}
+ */
+function drawAsterisk3(size: number, isReverse: boolean)
+```
+
+### 課題 6
+以下の文字列から任意の文字列が含まれていれば true を返す関数を実装してください。
+
 
 ```
 # 文字列
@@ -230,8 +319,8 @@ TypeScript はマイクロソフトによって開発され、メンテナンス
 function isSearchText(text: string, searchWord: string): boolean
 ```
 
-### 課題 4
-課題 3 の関数を改良して検索ワードにヒットした回数を返す関数を作ってください。
+### 課題 7
+課題 3 の関数を改良して検索ワードにヒットした回数を返す関数を実装してください。
 
 
 ```typescript
@@ -244,8 +333,8 @@ function isSearchText(text: string, searchWord: string): boolean
 function searchText(text: string, searchWord: string): number
 ```
 
-### 課題 5
-数字を並べ替えする関数を作ってください。ソートアルゴリズムは挿入ソート。<br>
+### 課題 8
+数字を並べ替えする関数を実装してください。ソートアルゴリズムは挿入ソート。<br>
 [挿入ソートの例](https://programming-place.net/ppp/contents/algorithm/sort/004.html)<br>
 
 
@@ -259,8 +348,10 @@ function searchText(text: string, searchWord: string): number
 function sort(nums: number[], desc: boolean): number
 ```
 
-### 課題 6
-### 課題 7
-### 課題 8
 ### 課題 9
 ### 課題 10
+### 課題 11
+### 課題 12
+### 課題 13
+### 課題 14
+### 課題 15
