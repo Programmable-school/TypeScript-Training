@@ -30,6 +30,7 @@
 - [ジェネリクス](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson_Generics.ts)
 - [非同期処理](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson_AsyncProcess.ts)
 - [ReactiveX](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson_ReactiveX.ts)
+- [課題](#課題)
 
 ## 学習
 TypeScriptを実行できる環境を構築し、目次の順番にコードを写経しています。<br>
@@ -181,3 +182,85 @@ $ npm run lesson-rxjs
 ```
 
 以上です。
+
+## 課題
+### 課題 1
+足し算、引き残、掛け算、割り算を計算する関数を作ってください。
+
+
+```typescript
+/**
+ *  二つの値の足し算、引き残、掛け算、割り算の計算
+ *  @param {number} a 値
+ *  @param {number} b 値
+ *  @param {CalcType} type 計算種別（enumで定義してください。）
+ *  @return {number} 出力結果
+ */
+function calc(a: number, b: number, type: CalcType): number
+```
+### 課題 2
+配列の値を指定された倍数分掛け算した配列にして返す関数を作ってください。
+<br>
+
+```typescript
+/**
+ *  配列を任意の倍数にする
+ *  @param {number[]} nums 対象データ配列
+ *  @param {number} multiple 倍数
+ *  @return {number[]} 出力結果 multipleの値で掛けたnumsの結果
+ */
+function multiple(nums: number[], multiple: number): number[]
+```
+
+### 課題 3
+以下の文字列から任意の文字列が含まれていれば true を返す関数を作ってください。
+
+```
+# 文字列
+TypeScript はマイクロソフトによって開発され、メンテナンスされているフリーでオープンソースのプログラミング言語である。TypeScriptはJavaScriptに対して、省略も可能な静的型付けとクラスベースオブジェクト指向を加えた厳密なスーパーセットとなっている。C# のリードアーキテクトであり、DelphiとTurbo Pascalの開発者でもあるアンダース・ヘルスバーグが TypeScript の開発に関わっている。TypeScriptはクライアントサイド、あるいはサーバサイド (Node.js) で実行されるJavaScriptアプリケーションの開発に利用できる。
+```
+
+```typescript
+/**
+ *  テキストから任意のワードを検索する
+ *  @param {string} text 検索対象のテキスト
+ *  @param {string} searchWord 検索するワード
+ *  @return {boolean} 出力結果 true:存在する false:存在しない
+ */
+function isSearchText(text: string, searchWord: string): boolean
+```
+
+### 課題 4
+課題 3 の関数を改良して検索ワードにヒットした回数を返す関数を作ってください。
+
+
+```typescript
+/**
+ *  テキストから任意のワードを検索する
+ *  @param {string} text 検索対象のテキスト
+ *  @param {string} searchWord 検索するワード
+ *  @return {number} 出力結果 検索ヒットした回数
+ */
+function searchText(text: string, searchWord: string): number
+```
+
+### 課題 5
+数字を並べ替えする関数を作ってください。ソートアルゴリズムは挿入ソート。<br>
+[挿入ソートの例](https://programming-place.net/ppp/contents/algorithm/sort/004.html)<br>
+
+
+```typescript
+/**
+ *  配列のソート（挿入ソート）
+ *  @param {number[]} nums ソート対象の値配列
+ *  @param {boolean} isDesc 降順でのソートフラグ true:降順 false:昇順
+ *  @return {number[]} 出力結果
+ */
+function sort(nums: number[], desc: boolean): number
+```
+
+### 課題 6
+### 課題 7
+### 課題 8
+### 課題 9
+### 課題 10
