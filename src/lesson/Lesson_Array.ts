@@ -20,4 +20,11 @@ export function Lesson_Array() {
   const pop: number = nums.pop()
   console.log(`pop ${pop}`)      // pop 5
   console.log(`nums ${nums}`)    // nums 0,1,2,3,4
+
+  // 配列は参照渡し（コピーではない）なので、array2の変更はarray1にも反映される。
+  const array1: number[] = [0, 1, 2, 3]
+  console.log(array1)           // [0, 1, 2, 3]
+  const array2 = array1
+  array2[2] = 100
+  console.log(array1, array2)   // [ 0, 1, 100, 3 ] [ 0, 1, 100, 3 ]
 }
