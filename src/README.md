@@ -112,7 +112,7 @@ Hello! world.
 $ npm run serve
 Hello! world.
 ```
-おめでとうございます。環境構築からHelo! world.を表示させることができました。<br>
+おめでとうございます。環境構築からHello! world.を表示させることができました。<br>
 
 ### 変数と定数 〜 ReactiveX
 [目次](#目次)に沿って学習していきます。<br>
