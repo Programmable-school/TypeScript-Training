@@ -239,7 +239,13 @@ function multiple(nums: number[], multiple: number): number[]
  *  @param {boolean} isReverse true:*が多い順に表示, false：*が少ない順に表示
  *  @return {void}
  */
-function drawAsterisk1(size: number, isReverse: boolean)
+function drawAsterisk1(size: number, isReverse: boolean) {
+  let result: string = ''
+  /**
+   * for文を使ってresultに*を連結して作成してください。
+   */
+  console.log(result)
+}
 ```
 
 ### 課題 4
@@ -268,7 +274,13 @@ function drawAsterisk1(size: number, isReverse: boolean)
  *  @param {boolean} isReverse true:*が多い順に表示, false：*が少ない順に表示
  *  @return {void}
  */
-function drawAsterisk2(size: number, isReverse: boolean)
+function drawAsterisk2(size: number, isReverse: boolean) {
+  let result: string = ''
+  /**
+   * for文を使ってresultに*を連結して作成してください。
+   */
+  console.log(result)
+}
 ```
 ### 課題 5
 以下の*をコンソール上に描画する関数を実装してください。
@@ -297,7 +309,13 @@ function drawAsterisk2(size: number, isReverse: boolean)
  *  @param {boolean} isReverse true:*が多い順に表示, false：*が少ない順に表示
  *  @return {void}
  */
-function drawAsterisk3(size: number, isReverse: boolean)
+function drawAsterisk3(size: number, isReverse: boolean) {
+  let result: string = ''
+  /**
+   * for文を使ってresultに*を連結して作成してください。
+   */
+  console.log(result)
+}
 ```
 
 ### 課題 6
@@ -355,3 +373,6 @@ function sort(nums: number[], desc: boolean): number
 ### 課題 13
 ### 課題 14
 ### 課題 15
+
+### 答え
+課題の答えは[こちら](./src/task_answer)です。

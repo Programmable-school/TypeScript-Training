@@ -18,6 +18,12 @@
     "lesson": "npm run build && node build/lesson.js",
     "lesson-async": "npm run build && node build/app_async.js",
     "lesson-rxjs": "npm run build && node build/app_rxjs.js",
+    "task-1": "npm run build && node build/task_answer/task1.js",
+    "task-2": "npm run build && node build/task_answer/task2.js",
+    "task-3": "npm run build && node build/task_answer/task3.js",
+    "task-4": "npm run build && node build/task_answer/task4.js",
+    "task-5": "npm run build && node build/task_answer/task5.js",
+    "task-6": "npm run build && node build/task_answer/task6.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "shohei",
