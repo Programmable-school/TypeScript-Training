@@ -226,7 +226,7 @@ function getHelloWithDate(): string
 ### 課題 3
 for文またはwhile文を使って、数字を0から100まで表示する関数を実装してください。
 
-数字と数字に間は空白を入れるようにしてください。
+数字と数字の間は空白を入れるようにしてください。
 
 実行結果
 
@@ -538,6 +538,70 @@ function sort(nums: number[], isDesc: boolean): number[]
 ```
 
 ### 課題 15
+数字をカウントダウンする関数を実装してください。
+
+ヒント：setIntervalを使います。
+
+実行結果
+
+```typescript
+countDownTimer(5) // 1秒ごとに5 ... 0とカウントダウンして処理が終了する
+```
+
+```typescript
+/**
+ *  カウントダウンする
+ *  @param {number} maxTime 
+ *  @return {void}
+ */
+function countDownTimer(maxTime: number)
+```
+
+### 課題 16
+{key: value} の形式でデータを取得する関数を実装してください。
+
+
+実行結果
+
+```typescript
+console.log(getKeyValues('0', 'shohei')) // { id: '0', value: 'shohei' }
+```
+
+```typescript
+/**
+ *  key: valueの形式でデータを取得する
+ *  @return {any} key: valueの形式
+ */
+function getKeyValues(id: string, value: string): any
+```
+
+
+### 課題 17
+以下の {key: value} のデータからnull以外の値を出力する関数を実装してください。
+
+実行結果
+
+```typescript
+const inputKeyValues = {
+  id: '100',
+  name: 'shohei',
+  age: null,
+  birthday: '1988/10/07',
+  hobby: null,
+}
+console.log(normKeyValues(inputKeyValues)) // { id: '100', name: 'shohei', birthday: '1988/10/07' }
+```
+
+```typescript
+/**
+ *  key: valueのデータでnull以外のデータに正規化する
+ *  @param {any} データ
+ *  @return {any} 正規化した結果
+ */
+function normKeyValues(data: any): any
+```
+
+### 課題 18
 スーパークラスのprivate変数をサブクラスが取得できるよう実装してください。
 
 実行結果
@@ -567,7 +631,7 @@ class Kobun extends Boss {
 
 ```
 
-### 課題 16
+### 課題 19
 以下のクラス関係において、実行結果通りに動作するよう実装してください。
 
 
@@ -629,10 +693,7 @@ class PhoneHuman implements Phone {
 
 ```
 
-### 課題 17
-### 課題 18
-### 課題 19
-### 課題 29
+### 課題 20
 
 ### 答え
 課題の答えは[こちら](./task_answer)です。

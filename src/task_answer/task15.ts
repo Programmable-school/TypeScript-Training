@@ -1,22 +1,22 @@
-class Boss {
-  private otakara: string = 'お宝の在りかは大阪上本町の上の方だよ！'
-  protected getOtakara() {
-    return this.otakara
-  }
+/**
+ *  カウントダウンする
+ *  @param {number} maxTime 
+ *  @return {void}
+ */
+function countDownTimer(maxTime: number) {
+  let count = 0
+  const intervalId = setInterval( () =>{
+    console.log(maxTime - count)
+    count++
+    if (maxTime < count) {
+      clearInterval(intervalId) 
+    }
+  }, maxTime*1000)
 }
 
-class Kobun extends Boss {
-  /**
-   * ヒント：Bossクラスで作ったメソッドを○○
-   **/
-  getOtakara() {
-    return super.getOtakara()
-  }
-}
 
 /**
  * 実行
  */
-const kobun = new Kobun()
-console.log(kobun.getOtakara()) // お宝の在りかは大阪上本町の上の方だよ！
+countDownTimer(5) // 1秒ごとに5 ... 0とカウントダウンして処理が終了する
 
