@@ -412,12 +412,143 @@ function sort(nums: number[], isDesc: boolean): number[]
 ```
 
 ### 課題 9
+スーパークラスのprivate変数をサブクラスが取得できるよう実装してください。
+
+実行結果
+
+```typescript
+const kobun = new Kobun()
+console.log(kobun.getOtakara()) // お宝の在りかは大阪上本町の上の方だよ！
+```
+
+穴埋め形式
+
+```typescript
+class Boss {
+  private otakara: string = 'お宝の在りかは大阪上本町の上の方だよ！'
+  protected getOtakara(): string {
+    /**
+     * ヒント：文字列を返すすように実装することを考えると.....？
+     **/
+  }
+}
+
+class Kobun extends Boss {
+  /**
+   * ヒント：Bossクラスで作ったメソッドをオーバーライドして.....？
+   **/
+}
+
+```
+
 ### 課題 10
+以下のクラス関係において、実行結果通りに動作するよう実装してください。
+
+
+ヒント：interfaceクラスのメソッドをオーバーライドして結果を表示する。
+
+
+実行結果
+
+```typescript
+const shohei = new PhoneHuman('shohei', '08012345678')
+const yamada = new PhoneHuman('山田', '09000000000')
+shohei.setFriend(yamada)
+yamada.call()               // shoheiです。 山田 くんから電話がきました。着信番号: 09000000000
+yamada.setFriend(shohei)
+shohei.call()               // 山田です。 shohei くんから電話きました。着信番号: 08012345678
+```
+
+
+穴埋め形式
+
+```typescript
+interface Phone {
+  /**
+   * ここを実装してください。 
+   **/
+}
+
+class PhoneHuman implements Phone {
+  name: string
+  phoneNumber: string
+  friendInfo: Phone | null = null
+  friend: PhoneHuman | null = null
+
+  constructor(name: string, phoneNumber: string) {
+    this.name = name
+    this.phoneNumber = phoneNumber
+  }
+
+  setFriend(friend: PhoneHuman) {
+    this.friend = friend
+    this.friend.friendInfo = this
+  }
+
+  receive(name: string, phoneNumber: string) {
+    /**
+     * ここを実装してください。
+     **/
+  }
+
+  call() {
+    /**
+     * ここを実装してください。
+     **/
+  }
+}
+
+```
+
 ### 課題 11
+コメントコメント
+
+実行結果
+```typescript
+```
+
+```typescript
+```
+
 ### 課題 12
+コメントコメント
+
+実行結果
+```typescript
+```
+
+```typescript
+```
+
 ### 課題 13
+コメントコメント
+
+実行結果
+```typescript
+```
+
+```typescript
+```
+
 ### 課題 14
+コメントコメント
+
+実行結果
+```typescript
+```
+
+```typescript
+```
+
 ### 課題 15
+コメントコメント
+
+実行結果
+```typescript
+```
+
+```typescript
+```
 
 ### 答え
 課題の答えは[こちら](./task_answer)です。
