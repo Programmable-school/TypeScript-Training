@@ -187,6 +187,14 @@ $ npm run lesson-rxjs
 ### 課題 1
 足し算、引き算、掛け算、割り算する関数を実装してください。
 
+実行結果
+
+```typescript
+console.log('Add', calc(a, b, CalcType.Add))      // Add 12
+console.log('Sub', calc(a, b, CalcType.Sub))      // Sub 8
+console.log('Multi', calc(a, b, CalcType.Multi))  // Multi 20
+console.log('Div', calc(a, b, CalcType.Div))      // Div 5
+```
 
 ```typescript
 /**
@@ -200,7 +208,12 @@ function calc(a: number, b: number, type: CalcType): number
 ```
 ### 課題 2
 配列の値を指定された倍数分掛け算した配列にして返す関数を実装してください。
-<br>
+
+実行結果
+
+```typescript
+console.log('multiple', multiple([10, 2, 4, 1], 3)) // multiple [ 30, 6, 12, 3 ]
+```
 
 ```typescript
 /**
@@ -215,6 +228,7 @@ function multiple(nums: number[], multiple: number): number[]
 ### 課題 3
 以下の*をコンソール上に描画する関数を実装してください。
 
+実行結果
 
 ```typescript
 // isReverse: false
@@ -242,7 +256,7 @@ function multiple(nums: number[], multiple: number): number[]
 function drawAsterisk1(size: number, isReverse: boolean) {
   let result: string = ''
   /**
-   * for文を使ってresultに*を連結して作成してください。
+   * for文とif文を使ってresultに*を連結して作成してください。
    */
   console.log(result)
 }
@@ -250,6 +264,8 @@ function drawAsterisk1(size: number, isReverse: boolean) {
 
 ### 課題 4
 以下の*をコンソール上に描画する関数を実装してください。
+
+実行結果
 
 ```typescript
 // isReverse: false
@@ -277,7 +293,7 @@ function drawAsterisk1(size: number, isReverse: boolean) {
 function drawAsterisk2(size: number, isReverse: boolean) {
   let result: string = ''
   /**
-   * for文を使ってresultに*を連結して作成してください。
+   * for文とif文を使ってresultに*を連結して作成してください。
    */
   console.log(result)
 }
@@ -285,6 +301,7 @@ function drawAsterisk2(size: number, isReverse: boolean) {
 ### 課題 5
 以下の*をコンソール上に描画する関数を実装してください。
 
+実行結果
 
 ```typescript
 // isReverse: false
@@ -312,7 +329,7 @@ function drawAsterisk2(size: number, isReverse: boolean) {
 function drawAsterisk3(size: number, isReverse: boolean) {
   let result: string = ''
   /**
-   * for文を使ってresultに*を連結して作成してください。
+   * for文とif文を使ってresultに*を連結して作成してください。
    */
   console.log(result)
 }
@@ -321,10 +338,18 @@ function drawAsterisk3(size: number, isReverse: boolean) {
 ### 課題 6
 以下の文字列から任意の文字列が含まれていれば true を返す関数を実装してください。
 
+文字列（task6Text）
 
 ```
-# 文字列
 TypeScript はマイクロソフトによって開発され、メンテナンスされているフリーでオープンソースのプログラミング言語である。TypeScriptはJavaScriptに対して、省略も可能な静的型付けとクラスベースオブジェクト指向を加えた厳密なスーパーセットとなっている。C# のリードアーキテクトであり、DelphiとTurbo Pascalの開発者でもあるアンダース・ヘルスバーグが TypeScript の開発に関わっている。TypeScriptはクライアントサイド、あるいはサーバサイド (Node.js) で実行されるJavaScriptアプリケーションの開発に利用できる。
+```
+
+実行結果
+
+```typescript
+console.log(isSearchText(task6Text, 'TypeScript'))   // true
+console.log(isSearchText(task6Text, 'メンテナンス'))   // true
+console.log(isSearchText(task6Text, 'shohei'))       // false
 ```
 
 ```typescript
@@ -340,6 +365,15 @@ function isSearchText(text: string, searchWord: string): boolean
 ### 課題 7
 課題 3 の関数を改良して検索ワードにヒットした回数を返す関数を実装してください。
 
+ヒント：[正規表現](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
+
+実行結果
+
+```typescript
+console.log(searchText(task7Text, 'TypeScript'))    // 4
+console.log(searchText(task7Text, 'プログラミング'))  // 1
+console.log(searchText(task7Text, 'shohei'))        // 0
+```
 
 ```typescript
 /**
@@ -353,7 +387,18 @@ function searchText(text: string, searchWord: string): number
 
 ### 課題 8
 数字を並べ替えする関数を実装してください。ソートアルゴリズムは挿入ソート。<br>
+[挿入ソートWiki](https://ja.wikipedia.org/wiki/%E6%8C%BF%E5%85%A5%E3%82%BD%E3%83%BC%E3%83%88)<br>
 [挿入ソートの例](https://programming-place.net/ppp/contents/algorithm/sort/004.html)<br>
+
+
+実行結果
+
+```typescript
+console.log(sort([8, 4, 3, 7, 6, 5, 2, 1], true))   // [ 8, 7, 6, 5, 4, 3, 2, 1 ]
+console.log(sort([8, 4, 3, 7, 6, 5, 2, 1], false))  // [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+console.log(sort([800, 4, 30, 700, 60, 5, 10, 1, 10], true))   // [ 800, 700, 60, 30, 10, 10, 5, 4, 1 ]
+console.log(sort([800, 4, 30, 700, 60, 5, 10, 1, 10], false))  // [ 1, 4, 5, 10, 10, 30, 60, 700, 800 ]
+```
 
 
 ```typescript
@@ -363,7 +408,7 @@ function searchText(text: string, searchWord: string): number
  *  @param {boolean} isDesc 降順でのソートフラグ true:降順 false:昇順
  *  @return {number[]} 出力結果
  */
-function sort(nums: number[], desc: boolean): number
+function sort(nums: number[], isDesc: boolean): number[]
 ```
 
 ### 課題 9
