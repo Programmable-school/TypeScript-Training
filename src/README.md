@@ -375,4 +375,4 @@ function sort(nums: number[], desc: boolean): number
 ### 課題 15
 
 ### 答え
-課題の答えは[こちら](./src/task_answer)です。
+課題の答えは[こちら](./task_answer)です。
