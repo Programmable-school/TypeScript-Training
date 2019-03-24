@@ -485,8 +485,9 @@ class PhoneHuman implements Phone {
   }
 
   setFriend(friend: PhoneHuman) {
-    this.friend = friend
-    this.friend.friendInfo = this
+    /**
+     * ここを実装してください。
+     **/
   }
 
   receive(name: string, phoneNumber: string) {
