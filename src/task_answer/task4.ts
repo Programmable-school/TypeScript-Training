@@ -1,28 +1,14 @@
 /**
- *  * を描画する
- *  @param {number} size *の最大個数
- *  @param {boolean} isReverse true:*が多い順に表示, false：*が少ない順に表示
+ *  0から100までを表示する。5の倍数ごとに改行する。
  *  @return {void}
  */
-function drawAsterisk2(size: number, isReverse: boolean) {
+function showHundred2(): void {
   let result: string = ''
-  for(let i = 0; i < size; i++) {
-    for(let j = 0; j < size; j++) {
-      if (isReverse) {
-        if (i <= j) {
-          result += '*'
-        } else {
-          result += ' '
-        }
-      } else {
-        if (j < size - i - 1) {
-          result += ' '
-        } else {
-          result += '*'
-        }
-      }
+  for(let i = 0; i <= 100; i++) {
+    result += `${i} `
+    if (i % 5 === 0 && i !== 0) {
+      result += '\n'
     }
-    result += '\n'
   }
   console.log(result)
 }
@@ -30,5 +16,11 @@ function drawAsterisk2(size: number, isReverse: boolean) {
 /**
  * 実行
  */
-drawAsterisk2(5, false)
-drawAsterisk2(5, true)
+/**
+ * 0 1 2 3 4 5 
+ * 6 7 8 9 10 
+ *   ......
+ * 91 92 93 94 95 
+ * 96 97 98 99 100 
+ */
+showHundred2()

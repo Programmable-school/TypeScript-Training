@@ -33,6 +33,11 @@
     "task-13": "npm run build && node build/task_answer/task13.js",
     "task-14": "npm run build && node build/task_answer/task14.js",
     "task-15": "npm run build && node build/task_answer/task15.js",
+    "task-16": "npm run build && node build/task_answer/task16.js",
+    "task-17": "npm run build && node build/task_answer/task17.js",
+    "task-18": "npm run build && node build/task_answer/task18.js",
+    "task-19": "npm run build && node build/task_answer/task19.js",
+    "task-20": "npm run build && node build/task_answer/task20.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "shohei",

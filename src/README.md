@@ -185,11 +185,137 @@ $ npm run lesson-rxjs
 
 ## 課題
 ### 課題 1
+「こんにちは」と返す関数を実装してください。
+
+実行結果
+
+```typescript
+console.log(getHello()) // こんにちは
+```
+
+```typescript
+/**
+ *  「こんにちは」を取得する
+ *  @return {string} 文字列
+ */
+function getHello(): string
+```
+
+### 課題 2
+時間によって挨拶を返す関数を実装してください。
+
+-  5時 - 11時： おはようございます
+- 12時 - 18時： こんにちは
+- 18時 - 0時：  こんばんは
+-  1時 - 4時：  夜更かしさん
+
+実行結果
+
+```typescript
+console.log(getHelloWithDate()) // こんばんは ※時間帯によって異なる
+```
+
+```typescript
+/**
+ *  時間によって挨拶を返す関数
+ *  @return {string} 文字列
+ */
+function getHelloWithDate(): string
+```
+
+### 課題 3
+for文またはwhile文を使って、数字を0から100まで表示する関数を実装してください。
+
+数字と数字に間は空白を入れるようにしてください。
+
+実行結果
+
+```typescript
+showHundred1() // 0 1 2 3 4 5 ... 95 96 97 98 99 100 
+```
+
+```typescript
+/**
+ *  0から100までを表示する
+ *  @return {void}
+ */
+function showHundred1()
+```
+
+### 課題 4
+数字を0から100まで表示する関数を実装してください。
+
+但し、5の倍数ごとに改行してください。
+
+
+実行結果
+```typescript
+/**
+ * 0 1 2 3 4 5 
+ * 6 7 8 9 10 
+ *   ......
+ * 91 92 93 94 95 
+ * 96 97 98 99 100 
+ */
+showHundred2()
+```
+
+```typescript
+/**
+ *  0から100までを表示する。5の倍数ごとに改行する。
+ *  @return {void}
+ */
+function showHundred2()
+```
+
+### 課題 5
+3つの文字列を連結した文字列を返す関数を実装してください
+
+実行結果
+
+```typescript
+console.log(mergeString('俺は', '明日', '勉強する')) // 俺は明日勉強する
+```
+
+```typescript
+/**
+ *  3つの文字列を連結した文字列を返す
+ *  @param {string} str1 文字列1
+ *  @param {string} str2 文字列2
+ *  @param {string} str3 文字列3
+ *  @return {string} 連結した文字列
+ */
+function mergeString(str1: string, str2: string, str3: string): string
+```
+
+### 課題 6
+3つの文字列を１つの配列で返す関数を実装してください。
+
+実行結果
+
+```typescript
+console.log(getArrayString('俺は', '明日', '勉強する')) // [ '俺は', '明日', '勉強する' ]
+```
+
+```typescript
+/**
+ *  テキストから任意のワードを検索する
+ *  @param {string} str1 文字列1
+ *  @param {string} str2 文字列2
+ *  @param {string} str3 文字列3
+ *  @return {string[]} 連結した文字列配列
+ */
+function getArrayString(str1: string, str2: string, str3: string): string[]
+```
+
+### 課題 7
 足し算、引き算、掛け算、割り算する関数を実装してください。
 
 実行結果
 
 ```typescript
+const a = 10;
+const b = 2;
 console.log('Add', calc(a, b, CalcType.Add))      // Add 12
 console.log('Sub', calc(a, b, CalcType.Sub))      // Sub 8
 console.log('Multi', calc(a, b, CalcType.Multi))  // Multi 20
@@ -206,7 +332,7 @@ console.log('Div', calc(a, b, CalcType.Div))      // Div 5
  */
 function calc(a: number, b: number, type: CalcType): number
 ```
-### 課題 2
+### 課題 8
 配列の値を指定された倍数分掛け算した配列にして返す関数を実装してください。
 
 実行結果
@@ -225,7 +351,7 @@ console.log('multiple', multiple([10, 2, 4, 1], 3)) // multiple [ 30, 6, 12, 3 ]
 function multiple(nums: number[], multiple: number): number[]
 ```
 
-### 課題 3
+### 課題 9
 以下の*をコンソール上に描画する関数を実装してください。
 
 実行結果
@@ -262,7 +388,7 @@ function drawAsterisk1(size: number, isReverse: boolean) {
 }
 ```
 
-### 課題 4
+### 課題 10
 以下の*をコンソール上に描画する関数を実装してください。
 
 実行結果
@@ -298,7 +424,7 @@ function drawAsterisk2(size: number, isReverse: boolean) {
   console.log(result)
 }
 ```
-### 課題 5
+### 課題 11
 以下の*をコンソール上に描画する関数を実装してください。
 
 実行結果
@@ -335,10 +461,10 @@ function drawAsterisk3(size: number, isReverse: boolean) {
 }
 ```
 
-### 課題 6
+### 課題 12
 以下の文字列から任意の文字列が含まれていれば true を返す関数を実装してください。
 
-文字列（task6Text）
+文字列（sentence1）
 
 ```
 TypeScript はマイクロソフトによって開発され、メンテナンスされているフリーでオープンソースのプログラミング言語である。TypeScriptはJavaScriptに対して、省略も可能な静的型付けとクラスベースオブジェクト指向を加えた厳密なスーパーセットとなっている。C# のリードアーキテクトであり、DelphiとTurbo Pascalの開発者でもあるアンダース・ヘルスバーグが TypeScript の開発に関わっている。TypeScriptはクライアントサイド、あるいはサーバサイド (Node.js) で実行されるJavaScriptアプリケーションの開発に利用できる。
@@ -347,9 +473,9 @@ TypeScript はマイクロソフトによって開発され、メンテナンス
 実行結果
 
 ```typescript
-console.log(isSearchText(task6Text, 'TypeScript'))   // true
-console.log(isSearchText(task6Text, 'メンテナンス'))   // true
-console.log(isSearchText(task6Text, 'shohei'))       // false
+console.log(isSearchText(sentence1, 'TypeScript'))   // true
+console.log(isSearchText(sentence1, 'メンテナンス'))   // true
+console.log(isSearchText(sentence1, 'shohei'))       // false
 ```
 
 ```typescript
@@ -362,7 +488,7 @@ console.log(isSearchText(task6Text, 'shohei'))       // false
 function isSearchText(text: string, searchWord: string): boolean
 ```
 
-### 課題 7
+### 課題 13
 課題 3 の関数を改良して検索ワードにヒットした回数を返す関数を実装してください。
 
 ヒント：[正規表現](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
@@ -370,9 +496,9 @@ function isSearchText(text: string, searchWord: string): boolean
 実行結果
 
 ```typescript
-console.log(searchText(task7Text, 'TypeScript'))    // 4
-console.log(searchText(task7Text, 'プログラミング'))  // 1
-console.log(searchText(task7Text, 'shohei'))        // 0
+console.log(searchText(sentence2, 'TypeScript'))    // 4
+console.log(searchText(sentence2, 'プログラミング'))  // 1
+console.log(searchText(sentence2, 'shohei'))        // 0
 ```
 
 ```typescript
@@ -385,7 +511,7 @@ console.log(searchText(task7Text, 'shohei'))        // 0
 function searchText(text: string, searchWord: string): number
 ```
 
-### 課題 8
+### 課題 14
 数字を並べ替えする関数を実装してください。ソートアルゴリズムは挿入ソート。<br>
 [挿入ソートWiki](https://ja.wikipedia.org/wiki/%E6%8C%BF%E5%85%A5%E3%82%BD%E3%83%BC%E3%83%88)<br>
 [挿入ソートの例](https://programming-place.net/ppp/contents/algorithm/sort/004.html)<br>
@@ -411,7 +537,7 @@ console.log(sort([800, 4, 30, 700, 60, 5, 10, 1, 10], false))  // [ 1, 4, 5, 10,
 function sort(nums: number[], isDesc: boolean): number[]
 ```
 
-### 課題 9
+### 課題 15
 スーパークラスのprivate変数をサブクラスが取得できるよう実装してください。
 
 実行結果
@@ -441,7 +567,7 @@ class Kobun extends Boss {
 
 ```
 
-### 課題 10
+### 課題 16
 以下のクラス関係において、実行結果通りに動作するよう実装してください。
 
 
@@ -503,55 +629,10 @@ class PhoneHuman implements Phone {
 
 ```
 
-### 課題 11
-コメントコメント
-
-実行結果
-```typescript
-```
-
-```typescript
-```
-
-### 課題 12
-コメントコメント
-
-実行結果
-```typescript
-```
-
-```typescript
-```
-
-### 課題 13
-コメントコメント
-
-実行結果
-```typescript
-```
-
-```typescript
-```
-
-### 課題 14
-コメントコメント
-
-実行結果
-```typescript
-```
-
-```typescript
-```
-
-### 課題 15
-コメントコメント
-
-実行結果
-```typescript
-```
-
-```typescript
-```
+### 課題 17
+### 課題 18
+### 課題 19
+### 課題 29
 
 ### 答え
 課題の答えは[こちら](./task_answer)です。

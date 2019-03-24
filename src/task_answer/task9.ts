@@ -1,22 +1,28 @@
-class Boss {
-  private otakara: string = 'お宝の在りかは大阪上本町の上の方だよ！'
-  protected getOtakara() {
-    return this.otakara
+/**
+ *  * を描画する
+ *  @param {number} size *の最大個数
+ *  @param {boolean} isReverse true:*が多い順に表示, false：*が少ない順に表示
+ *  @return {void}
+ */
+function drawAsterisk1(size: number, isReverse: boolean) {
+  let result: string = ''
+  for(let i = 0; i < size; i++) {
+    if (isReverse) {
+      for(let j = 0; j < size - i; j++) {
+        result += '*'
+      }
+    } else {
+      for(let j = 0; j <= i; j++) {
+        result += '*'
+      }
+    }
+    result += '\n'
   }
-}
-
-class Kobun extends Boss {
-  /**
-   * ヒント：Bossクラスで作ったメソッドを○○
-   **/
-  getOtakara() {
-    return super.getOtakara()
-  }
+  console.log(result)
 }
 
 /**
  * 実行
  */
-const kobun = new Kobun()
-console.log(kobun.getOtakara()) // お宝の在りかは大阪上本町の上の方だよ！
-
+drawAsterisk1(5, false)
+drawAsterisk1(5, true)

@@ -4,7 +4,7 @@ export function Lesson_LetConst() {
   let count: number = 1
   count += 1
   
-  let message: String = ``
+  let message: string = ''
   message = `Lesson ${count}`
   console.log('変数', message) // 変数 Lesson 2
 

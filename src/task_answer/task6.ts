@@ -1,17 +1,15 @@
 /**
  *  テキストから任意のワードを検索する
- *  @param {string} text 検索対象のテキスト
- *  @param {string} searchWord 検索するワード
- *  @return {boolean} 出力結果 true:存在する false:存在しない
+ *  @param {string} str1 文字列1
+ *  @param {string} str2 文字列2
+ *  @param {string} str3 文字列3
+ *  @return {string[]} 連結した文字列配列
  */
-function isSearchText(text: string, searchWord: string) {
-  return text.indexOf(searchWord) !== -1 ? true: false
+function getArrayString(str1: string, str2: string, str3: string): string[] {
+  return [str1, str2, str3]
 }
 
 /**
  * 実行
  */
-const task6Text: string = 'TypeScript はマイクロソフトによって開発され、メンテナンスされているフリーでオープンソースのプログラミング言語である。TypeScriptはJavaScriptに対して、省略も可能な静的型付けとクラスベースオブジェクト指向を加えた厳密なスーパーセットとなっている。C# のリードアーキテクトであり、DelphiとTurbo Pascalの開発者でもあるアンダース・ヘルスバーグが TypeScript の開発に関わっている。TypeScriptはクライアントサイド、あるいはサーバサイド (Node.js) で実行されるJavaScriptアプリケーションの開発に利用できる。'
-console.log(isSearchText(task6Text, 'TypeScript'))   // true
-console.log(isSearchText(task6Text, 'メンテナンス'))   // true
-console.log(isSearchText(task6Text, 'shohei'))       // false
+console.log(getArrayString('俺は', '明日', '勉強する')) // [ '俺は', '明日', '勉強する' ]

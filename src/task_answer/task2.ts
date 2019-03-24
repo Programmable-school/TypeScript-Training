@@ -1,14 +1,22 @@
 /**
- *  配列を任意の倍数にする
- *  @param {number[]} nums 対象データ配列
- *  @param {number} multiple 倍数
- *  @return {number[]} 出力結果 multipleの値で掛けたnumsの結果
+ *  「こんにちは」を取得する
+ *  @return {string} 文字列
  */
-function multiple(nums: number[], multiple: number): number[] {
-  return nums.map((num) => num * multiple)
+function getHelloWithDate(): string {
+  const date = new Date()
+  const hours = date.getHours()
+  if (5 <= hours && hours < 12) {
+    return 'おはようございます'
+  } else if (12 <= hours && hours < 18) {
+    return 'こんにちは'
+  } else if (18 <= hours && hours < 24) {
+    return 'こんばんは'
+  } else {
+    return '夜更かしさん'
+  }
 }
 
 /**
  * 実行
  */
-console.log('multiple', multiple([10, 2, 4, 1], 3)) // multiple [ 30, 6, 12, 3 ]
+console.log(getHelloWithDate()) // こんばんは ※時間帯によって異なる
