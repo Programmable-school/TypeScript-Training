@@ -7,16 +7,14 @@
 function drawAsterisk3(size: number, isReverse: boolean) {
   let result: string = ''
   for(let i = 0; i < size; i++) {
-    if (isReverse) {
-      for(let j = 0; j < size; j++) {
+    for(let j = 0; j < size; j++) {
+      if (isReverse) {
         if (j == size - i - 1) {
           result += '*'
         } else {
           result += ' '
         }
-      }
-    } else {
-      for(let j = 0; j < size; j++) {
+      } else {
         if (j == i) {
           result += '*'
         } else {
