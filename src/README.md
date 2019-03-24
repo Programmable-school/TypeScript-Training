@@ -429,14 +429,14 @@ class Boss {
   protected getOtakara(): string {
     /**
      * ヒント：文字列を返すすように実装することを考えると.....？
-     **/
+     * */
   }
 }
 
 class Kobun extends Boss {
   /**
    * ヒント：Bossクラスで作ったメソッドをオーバーライドして.....？
-   **/
+   * */
 }
 
 ```
@@ -454,9 +454,13 @@ class Kobun extends Boss {
 const shohei = new PhoneHuman('shohei', '08012345678')
 const yamada = new PhoneHuman('山田', '09000000000')
 shohei.setFriend(yamada)
-yamada.call()               // shoheiです。 山田 くんから電話がきました。着信番号: 09000000000
 yamada.setFriend(shohei)
-shohei.call()               // 山田です。 shohei くんから電話きました。着信番号: 08012345678
+
+/** 
+ * callすることでセットされたfriendのreceive内のログを表示するよう実装する
+ * */
+shohei.call()   // 山田です。 shohei くんから電話きました。着信番号: 08012345678
+yamada.call()   // shoheiです。 山田 くんから電話がきました。着信番号: 09000000000
 ```
 
 
@@ -466,7 +470,7 @@ shohei.call()               // 山田です。 shohei くんから電話きま�
 interface Phone {
   /**
    * ここを実装してください。 
-   **/
+   * */
 }
 
 class PhoneHuman implements Phone {
@@ -486,9 +490,7 @@ class PhoneHuman implements Phone {
   }
 
   receive(name: string, phoneNumber: string) {
-    /**
-     * ここを実装してください。
-     **/
+    console.log(`${this.name}です。`, `${name} くんから電話がきました。着信番号: ${phoneNumber}`)
   }
 
   call() {
