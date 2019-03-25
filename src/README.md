@@ -634,6 +634,7 @@ class Kobun extends Boss {
 ### 課題 19
 以下のクラス関係において、実行結果通りに動作するよう実装してください。
 
+コメントアウト上の「KADAI」箇所を実装してください。
 
 ヒント：interfaceクラスのメソッドをオーバーライドして結果を表示する。
 
@@ -676,7 +677,7 @@ class PhoneHuman implements Phone {
 
   setFriend(friend: PhoneHuman) {
     /**
-     * ここを実装してください。
+     * 【KADAI】ここを実装してください。
      **/
   }
 
@@ -686,7 +687,7 @@ class PhoneHuman implements Phone {
 
   call() {
     /**
-     * ここを実装してください。
+     * 【KADAI】ここを実装してください。
      **/
   }
 }
@@ -694,6 +695,102 @@ class PhoneHuman implements Phone {
 ```
 
 ### 課題 20
+参照渡しと値渡しの課題です。<br>
+→ [参照渡しと値渡しとは](https://wa3.i-3-i.info/word16070.html)
+
+profileAオブジェクトのデータを値渡しして、新しいオブジェクトを生成してください。<br>
+ただし、値渡しで以下の型で新しいオブジェクトを作成してください。
+- any
+- Profile
+- ProfileModel
+
+コメントアウト上の「KADAI」箇所を実装してください。
+
+ヒント：[Object.assing](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+
+実行結果
+
+```typescript
+/**
+ * 以下の内容がコンソールログに表示される。
+ * 
+ * 参照渡し ProfileModel { id: '1', name: 'hanako' }
+ * 参照渡し ProfileModel { id: '1', name: 'hanako' }
+ * 値渡し { id: '0', name: 'yamada' }
+ * 値渡し { id: '1', name: 'hanako' }
+ * 値渡し { id: '2', name: 'taro' }
+ * 値渡し { id: '3', name: 'tanaka' }
+ * */
+
+```
+
+穴埋め形式
+```typescript
+interface Profile {
+  id: string
+  name: string
+}
+
+class ProfileModel implements Profile {
+  id: string
+  name: string
+  constructor(profile: Profile) {
+    this.id = profile.id
+    this.name = profile.name
+  }
+
+  values(): any {
+    /**
+     * 【KADAI】ここを実装してください。
+     * */
+  }
+
+  /**
+   * 【KADAI】ここにProfile型で値を返す関数を実装してください。
+   * */
+}
+
+function referenceAndCopy() {
+  {
+    /** 
+     * 参照渡し 
+     * profileAを代入したprofileBの値を変更するとprofileAにも反映される
+     * */
+    const profileA: ProfileModel = new ProfileModel({ id: '0', name: 'yamada' })
+    const profileB: ProfileModel = profileA
+    profileB.id = '1'
+    profileB.name = 'hanako'
+    console.log('参照渡し', profileA) // 参照渡し ProfileModel { id: '1', name: 'hanako' }
+    console.log('参照渡し', profileB) // 参照渡し ProfileModel { id: '1', name: 'hanako' }
+  }
+
+  {
+    /** 
+     * 値渡し 
+     * profileAを値渡しでコピーすることで値を変更してもprofileAには反映されない。
+     * */
+    let profileA: ProfileModel = new ProfileModel({ id: '0', name: 'yamada' })
+
+    const copyA: any = profileA.values()
+    const copyB: Profile = /* 【KADAI】ここを実装してください。 */
+    const copyC: ProfileModel = /* 【KADAI】ここを実装してください。 */
+    copyA.id = '1'
+    copyA.name = 'hanako'
+    copyB.id = '2'
+    copyB.name = 'taro'
+    copyC.id = '3'
+    copyC.name = 'tanaka'
+    console.log('値渡し', profileA.values())
+    console.log('値渡し', copyA)
+    console.log('値渡し', copyB)
+    console.log('値渡し', copyC)
+  }
+}
+
+/** 実行 */
+referenceAndCopy() 
+```
+
 
 ### 答え
 課題の答えは[こちら](./task_answer)です。
