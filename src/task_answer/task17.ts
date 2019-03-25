@@ -17,12 +17,19 @@ function normKeyValues(data: any): any {
 /**
  * 実行
  */
-const inputKeyValues = {
+const inputKeyValues1 = {
   id: '100',
   name: 'shohei',
   age: null,
   birthday: '1988/10/07',
   hobby: null,
 }
-console.log(normKeyValues(inputKeyValues)) // { id: '100', name: 'shohei', birthday: '1988/10/07' }
-
+const inputKeyValues2 = {
+  tamago: null,
+  ringo: 'apple',
+  doraemon: null,
+  banana: null,
+  gohan: null,
+}
+console.log(normKeyValues(inputKeyValues1)) // { id: '100', name: 'shohei', birthday: '1988/10/07' }
+console.log(normKeyValues(inputKeyValues2)) // { ringo: 'apple' }

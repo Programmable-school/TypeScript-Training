@@ -558,7 +558,7 @@ function countDownTimer(maxTime: number)
 ```
 
 ### 課題 16
-{key: value} の形式でデータを取得する関数を実装してください。
+{ key: value } の形式データを取得する関数を実装してください。
 
 
 実行結果
@@ -577,19 +577,27 @@ function getKeyValues(id: string, value: string): any
 
 
 ### 課題 17
-以下の {key: value} のデータからnull以外の値を出力する関数を実装してください。
+{ key: value } の形式データからnull以外の値を出力する関数を実装してください。
 
 実行結果
 
 ```typescript
-const inputKeyValues = {
+const inputKeyValues1 = {
   id: '100',
   name: 'shohei',
   age: null,
   birthday: '1988/10/07',
   hobby: null,
 }
-console.log(normKeyValues(inputKeyValues)) // { id: '100', name: 'shohei', birthday: '1988/10/07' }
+const inputKeyValues2 = {
+  tamago: null,
+  ringo: 'apple',
+  doraemon: null,
+  banana: null,
+  gohan: null,
+}
+console.log(normKeyValues(inputKeyValues1)) // { id: '100', name: 'shohei', birthday: '1988/10/07' }
+console.log(normKeyValues(inputKeyValues2)) // { ringo: 'apple' }
 ```
 
 ```typescript
@@ -618,14 +626,16 @@ class Boss {
   private otakara: string = 'お宝の在りかは大阪上本町の上の方だよ！'
   protected getOtakara(): string {
     /**
-     * ヒント：文字列を返すすように実装することを考えると.....？
+     * 【KADAI】ここを実装してください。
+     *  ヒント：文字列を返すすように実装することを考えると.....？
      * */
   }
 }
 
 class Kobun extends Boss {
   /**
-   * ヒント：Bossクラスで作ったメソッドをオーバーライドして.....？
+   * 【KADAI】ここを実装してください。
+   *  ヒント：Bossクラスで作ったメソッドをオーバーライドして.....？
    * */
 }
 
@@ -633,8 +643,6 @@ class Kobun extends Boss {
 
 ### 課題 19
 以下のクラス関係において、実行結果通りに動作するよう実装してください。
-
-コメントアウト上の「KADAI」箇所を実装してください。
 
 ヒント：interfaceクラスのメソッドをオーバーライドして結果を表示する。
 
@@ -660,7 +668,7 @@ yamada.call()   // shoheiです。 山田 くんから電話がきました。�
 ```typescript
 interface Phone {
   /**
-   * ここを実装してください。 
+   * 【KADAI】ここを実装してください。 
    * */
 }
 
