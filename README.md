@@ -35,7 +35,7 @@
 - [ジェネリクス](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson_Generics.ts)
 - [非同期処理](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson_AsyncProcess.ts)
 - [ReactiveX](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/lesson/Lesson_ReactiveX.ts)
-- [課題](./src/README.md)
+- [課題](https://github.com/Programmable-school/TypeScript-Training/blob/master/src/README.md#%E8%AA%B2%E9%A1%8C)
 
 ## 環境構築
 
