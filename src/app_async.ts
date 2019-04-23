@@ -1,4 +1,4 @@
-import { Lesson_AsyncProcess } from './lesson/Lesson_AsyncProcess'
+import { lessonAsyncProcess } from './lesson/lessonAsyncProcess'
 
 /* 非同期処理 */
-Lesson_AsyncProcess()
+lessonAsyncProcess()

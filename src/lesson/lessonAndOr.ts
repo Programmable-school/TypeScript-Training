@@ -1,5 +1,5 @@
 /* AND・OR, 三項演算子 */
-export function Lesson_AndOr() {
+export function lessonAndOr() {
   const isActive: boolean = true
   const age: number = 20
   

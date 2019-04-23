@@ -1,5 +1,5 @@
 /* 連想配列 */
-export function Lesson_AssociativeArray() {
+export function lessonAssociativeArray() {
   const itemA: any = {
     name: 'Taro',
     age: 20

@@ -1,5 +1,5 @@
 /* プリミティブ型、Any型 */
-export function Lesson_PriAny() {
+export function lessonPriAny() {
   // プリミティブ型
   const num: number = 10	          // number型
   const str: string = '文字列'       // string型
@@ -10,16 +10,16 @@ export function Lesson_PriAny() {
   console.log('isActive', isActive) // isActive true
 
   // Any型（なんでも入る）
-  let variable: any
-  variable = 1
-  console.log('number', variable) // number 1
+  let value: any
+  value = 1
+  console.log('number', value) // number 1
 
-  variable = '文字列'
-  console.log('string', variable) // string 文字列
+  value = '文字列'
+  console.log('string', value) // string 文字列
 
-  variable = false
-  console.log('boolean', variable) // boolean false
+  value = false
+  console.log('boolean', value) // boolean false
 
-  variable = new Date()
-  console.log('class', variable) // class 2019-01-03T00:23:46.481Z
+  value = new Date()
+  console.log('class', value) // class 2019-01-03T00:23:46.481Z
 }

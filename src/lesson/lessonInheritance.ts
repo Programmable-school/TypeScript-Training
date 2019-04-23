@@ -7,7 +7,7 @@
     private: 親クラスのみ利用できる
     protected: 親クラスと子クラスのみ利用できる。外部からアクセスはできない
 */
-export function Lesson_Inheritance() {
+export function lessonInheritance() {
   // Engineerの社員を生成
   const employee1: Employee = new Employee(0)
   employee1.setProfile('Taro', 'President')

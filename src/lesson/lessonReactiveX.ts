@@ -1,66 +1,63 @@
 /* ReactiveX */
-/*
-    ・公式サイト
-    http://reactivex.io/
-
-    ・Github
-    https://github.com/ReactiveX/rxjs
-    
-    # ReactiveXのJavaScript版のrxjsをインストール
-    $ npm install --save rxjs
-
-    # HTTPクライアントのaxiosをインストール
-    $ npm install --save axios
+/**
+ * ReactiveX
+ *  ・公式サイト
+ *  http://reactivex.io/
+ * 
+ *  ・Github
+ *  https://github.com/ReactiveX/rxjs
+ * 
+ *  ReactiveXのJavaScript版のrxjsをインストール
+ *  $ npm install --save rxjs
+ * 
+ *  HTTPクライアントのaxiosをインストール
+ *  $ npm install --save axios
  */
-// RxJSをインポートする
 import { Observable, BehaviorSubject, from, zip, empty } from 'rxjs'
 import { map, catchError } from 'rxjs/operators'
-
 import axios, { AxiosResponse } from 'axios' 
 import { sleep } from '../utils/utils'
-import { request } from 'http';
 
-// Qiita APIのURLを定義
-/*
-   注意：リクエストしすぎるとリクエスト制限がかかる
-*/
+/**
+ * Qiita APIのURLを定義
+ * 注意：リクエストしすぎるとリクエスト制限がかかる
+ */
 const userName: string = 'hukusuke1007' // 自分のアカウントを設定
 const userListUrl: string = 'https://qiita.com/api/v2/users'
 const userDetailUrl: string = `https://qiita.com/api/v2/users/${userName}`
 
-/*
-  Observable: ストリーム（データを流す通路）
-  BehaviorSubject: 最後のデータを保持する。onNextで新しいデータを流し、subscribeとvalueでデータを取得できる
-  from: 引数に指定されたデータのObservableを生成
-  zip: 複数のObservableから流れてきたデータを組み合わせて単一のデータにする
-  empty: 何のデータを持っていないObservableを生成
-  map: pip内で使えるmap。機能はリスト操作のmapと同じ
-  catchError: pip内で発生したエラーをキャッチ
-*/
-
-export async function Lesson_ReactiveX() {
-  console.log('---- Lesson_ReactiveX ----')
+/**
+ * Observable: ストリーム（データを流す通路）
+ * BehaviorSubject: 最後のデータを保持する。onNextで新しいデータを流し、subscribeとvalueでデータを取得できる
+ * from: 引数に指定されたデータのObservableを生成
+ * zip: 複数のObservableから流れてきたデータを組み合わせて単一のデータにする
+ * empty: 何のデータを持っていないObservableを生成
+ * map: pip内で使えるmap。機能はリスト操作のmapと同じ
+ * catchError: pip内で発生したエラーをキャッチ
+ */
+export async function lessonReactiveX() {
+  console.log('---- lessonReactiveX ----')
   const sleepTime: number = 1000 // 順番にコールするために待ち合わせする
 
-  // ■ Rxで値を加工する
-  LessonRxProcess()
+  // Rxで値を加工する
+  lessonRxProcess()
 
-  // ■ Rxでデータバインディングのようなことをする
-  LessonRxBinding()
+  // Rxでデータバインディングのようなことをする
+  lessonRxBinding()
 
-  // ■ RxでAPIのレスポンスを取得する
-  LessonRxApiRequest()
+  // RxでAPIのレスポンスを取得する
+  lessonRxApiRequest()
   await sleep(sleepTime)
 
-  // ■ RxでPromiseAllのようなことをする
-  LessonRxPromiseAll()
+  // RxでPromiseAllのようなことをする
+  lessonRxPromiseAll()
   await sleep(sleepTime)
 
-  // ■ RxでAsync/Awaitのようなことをする
-  LessonRxAsyncAwait()
+  // RxでAsync/Awaitのようなことをする
+  lessonRxAsyncAwait()
   await sleep(sleepTime)
 
-  // ■ RxでViewがViewModelのデータを監視する
+  // RxでViewがViewModelのデータを監視する
   const view = new View()
   view.run()
 
@@ -68,12 +65,12 @@ export async function Lesson_ReactiveX() {
 }
 
 
-// ■ Rxで値を加工する
-function LessonRxProcess() {
-  /* 
-    Observable = ストリーム（データを流せれる通路）
-    subscribeをするとデータをストリームへ流して処理できる
-  */
+// Rxで値を加工する
+function lessonRxProcess() {
+  /**
+   * Observable = ストリーム（データを流せれる通路）
+   * subscribeをするとデータをストリームへ流して処理できる
+   */
   const o1: Observable<number> = from([1, 2, 3, 4, 5])
   const o2: Observable<string> = from(['A', 'B', 'C', 'D', 'E'])
 
@@ -116,8 +113,8 @@ function LessonRxProcess() {
   })
 }
 
-// ■ Rxでデータバインディングのようなことをする
-function LessonRxBinding() {
+// Rxでデータバインディングのようなことをする
+function lessonRxBinding() {
   const o1: BehaviorSubject<number> = new BehaviorSubject(1)
   const o2: BehaviorSubject<string> = new BehaviorSubject('A')
   console.log(`RxBinding o1 ${o1.value}, o2 ${o2.value}`)     // RxBinding o1 1, o2 A
@@ -142,9 +139,9 @@ function LessonRxBinding() {
     }
   })
 
-  /* 
-    nextでsubscribeで値を取得できる。
-    subscribe内に処理を書けばo1の値によってユニークな処理を実現できる。
+ /**
+  * nextでsubscribeで値を取得できる。
+  * subscribe内に処理を書けばo1の値によってユニークな処理を実現できる。
   */
   o1.next(2)
   console.log(`RxBinding o1 ${o1.value}, o2 ${o2.value}`)   // RxBinding o1 2, o2 B
@@ -159,10 +156,10 @@ function LessonRxBinding() {
   console.log(`RxBinding o1 ${o1.value}, o2 ${o2.value}`)   // RxBinding o1 5, o2 E
 }
 
-// ■ RxでAPIのレスポンスを取得する
-function LessonRxApiRequest() {
+// RxでAPIのレスポンスを取得する
+function lessonRxApiRequest() {
   // ユーザー情報を取得
-  LessonRxAPIClient(userDetailUrl).subscribe(
+  lessonRxAPIClient(userDetailUrl).subscribe(
     (result: AxiosResponse) => {
       console.log('RxApiRequest', result.data.profile_image_url)  // RxApiRequest https://qiita-image-store.s3.amazonaws.com/0/183031/profile-images/1538072254
     }, (error: Error) => {
@@ -170,10 +167,10 @@ function LessonRxApiRequest() {
     })
 }
 
-// ■ RxでPromiseAllのようなことをする
-function LessonRxPromiseAll() {
+// RxでPromiseAllのようなことをする
+function lessonRxPromiseAll() {
   // ユーザーリストとユーザー情報を取得
-  zip(LessonRxAPIClient(userListUrl), LessonRxAPIClient(userDetailUrl)).pipe(
+  zip(lessonRxAPIClient(userListUrl), lessonRxAPIClient(userDetailUrl)).pipe(
     map(([result1, result2]) => `${result1.data.length} ${result2.data.profile_image_url}` )
   ).subscribe((result: string) => {
     console.log('RxPromiseAll', result)   // RxPromiseAll 20 https://qiita-image-store.s3.amazonaws.com/0/183031/profile-images/1538072254
@@ -182,14 +179,14 @@ function LessonRxPromiseAll() {
   })
 }
 
-// ■ RxでAsync/Awaitのようなことをする
-function LessonRxAsyncAwait() {
+// RxでAsync/Awaitのようなことをする
+function lessonRxAsyncAwait() {
   // ユーザーリストを取得して１番目のユーザーの情報を取得する
-  LessonRxAPIClient(userListUrl).pipe(
+  lessonRxAPIClient(userListUrl).pipe(
     map(response => {
       const id: string = response.data[0].id
       console.log('RxAsyncAwait', id)
-      return LessonRxAPIClient(userListUrl + `/${id}`).toPromise()
+      return lessonRxAPIClient(userListUrl + `/${id}`).toPromise()
     }),
     catchError((error, caught) => {
       console.error('error', error)
@@ -204,7 +201,7 @@ function LessonRxAsyncAwait() {
   })
 }
 
-function LessonRxAPIClient(url: string)  {
+function lessonRxAPIClient(url: string)  {
   return from(axios.get(url))
 }
 
@@ -216,9 +213,7 @@ class View {
   }
 
   configure() {
-    /**
-     * 購読する
-     */
+    // 購読する
     this.viewModel.data.subscribe((value: string) => {
       console.log('subscribe', value) 
     })
@@ -232,9 +227,7 @@ class View {
 class ViewModel {
   data: BehaviorSubject<string> = new BehaviorSubject('noData')
   request() {
-    /**
-     * ここで外部からデータを取得し、nextでデータを流す。
-     */
+    // ここで外部からデータを取得し、nextでデータを流す。
     const result = 'updateData'
     this.data.next(result)
   }

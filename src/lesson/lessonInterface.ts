@@ -2,7 +2,7 @@
 /* 
   データの受け渡しやメンバ・メソッドを規約したいときに用いる
 */
-export function Lesson_Interface() {
+export function lessonInterface() {
   // データ受け渡し用にインターフェースでデータセット
   const student1: StudentDTO = { name: 'Yamada', score: 100 }
   const student2: StudentDTO = { name: 'Tanaka', score: 200 }

@@ -1,5 +1,5 @@
 /* while文（繰り返し） */
-export function Lesson_While() {
+export function lessonWhile() {
   const nums: number[] = [0, 1, 2, 3, 4, 5]
   let index: number = 0
   let total: number = nums[0]

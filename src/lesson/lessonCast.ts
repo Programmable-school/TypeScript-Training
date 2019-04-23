@@ -1,5 +1,5 @@
 /* キャスト変換（型変換） */
-export function Lesson_Cast() {
+export function lessonCast() {
   const numStr: string = '1000'
   const num: number = Number(numStr)
   if (typeof num === 'number') {

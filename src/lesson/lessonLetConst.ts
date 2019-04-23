@@ -1,12 +1,12 @@
 /* 変数と定数 */
-export function Lesson_LetConst() {
+export function lessonLetConst() {
   // 変数
   let count: number = 1
   count += 1
   
   let message: string = ''
-  message = `Lesson ${count}`
-  console.log('変数', message) // 変数 Lesson 2
+  message = `${count}`
+  console.log('変数', message) // 変数 2
 
   // 定数
   const name: string = '山田太郎'

@@ -1,5 +1,5 @@
 /* for文（繰り返し） */
-export function Lesson_For() {
+export function lessonFor() {
   const nums: number[] = [0, 1, 2, 3, 4, 5]
   
   // for

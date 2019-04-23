@@ -1,5 +1,5 @@
 /* ジェネリクス */
-export function Lesson_Generics() {
+export function lessonGenerics() {
   const staff = new Staff()
   staff.setData('大学生A', 'イベントのスタッフです。')
   const manager = new Manager()

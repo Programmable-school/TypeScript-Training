@@ -1,5 +1,5 @@
 /* 日付関数（Date） */
-export function Lesson_Date() {
+export function lessonDate() {
   
   // ■ 現在の日時を取得
   const nowDate: Date = new Date()

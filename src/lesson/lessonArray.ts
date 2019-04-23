@@ -1,5 +1,5 @@
 /* 配列 */
-export function Lesson_Array() {
+export function lessonArray() {
   const nums: number[] = [0, 1, 2, 3]
   console.log(nums)             // [ 0, 1, 2, 3 ]
   console.log(nums[0], nums[1]) // 0 1

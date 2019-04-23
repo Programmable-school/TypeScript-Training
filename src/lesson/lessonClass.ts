@@ -49,7 +49,7 @@ enum SexType {
   Woman
 }
 
-export function Lesson_Class() {
+export function lessonClass() {
   const man: Human = new Human(SexType.Man, '1990/1/1') // クラスのインスタンスを生成するときは new クラス名() の書き方をする
   man.name = 'Taro'
   man.setStatus(170, 80)

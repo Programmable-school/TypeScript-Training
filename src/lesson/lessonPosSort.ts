@@ -1,6 +1,6 @@
 /* 緯度と経度から距離を求めて近い順にまとめる */
 
-function sortLesson() {
+function lessonPosSort() {
   // 現在位置
   const nowPosition: any = {la: 24, lo: 102}
 

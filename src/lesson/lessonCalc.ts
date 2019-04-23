@@ -1,9 +1,9 @@
 /* 演算子 */
-export function Lesson_Calc() {
-  const variable: number = 1
-  const resultA: number = variable + 2
-  const resultB: number = variable * 2
-  const resultC: number = variable / 2
+export function lessonCalc() {
+  const value: number = 1
+  const resultA: number = value + 2
+  const resultB: number = value * 2
+  const resultC: number = value / 2
   console.log('resultA', resultA)   // resultA 3
   console.log('resultB', resultB)   // resultB 2
   console.log('resultC', resultC)   // resultC 0.5

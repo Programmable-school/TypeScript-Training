@@ -4,7 +4,7 @@ enum SocialType {
   Facebook,
   Instagram 
 }
-export function Lesson_Enum() {
+export function lessonEnum() {
   let type: SocialType = SocialType.Twitter
   let typeNum: number = SocialType.Twitter.valueOf()
   console.log(type)     // 0

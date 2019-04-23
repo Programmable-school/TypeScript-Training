@@ -1,4 +1,4 @@
-import { Lesson_ReactiveX } from './lesson/Lesson_ReactiveX'
+import { lessonReactiveX } from './lesson/lessonReactiveX'
 
 /* ReactiveX */
-Lesson_ReactiveX()
+lessonReactiveX()
