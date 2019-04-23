@@ -1,4 +1,4 @@
-/* Hello! World.を表示 */
+/* Hello Worldを表示 */
 export function helloWorld() {
-    console.log('Hello! world.') // Hello! world.
+    console.log('Hello world') // Hello world
 }

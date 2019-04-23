@@ -4,32 +4,32 @@
 
 ## 目次
 - [環境構築](https://github.com/Programmable-school/TypeScript-Training#%E6%89%8B%E9%A0%86)
-- [Hello! World.を表示](./lesson/lessonHelloWorld.ts)
-- [変数と定数](./lesson/lessonLetConst.ts)
-- [関数](./lesson/lessonFunction.ts)
-- [プリミティブ型、Any型](./lesson/lessonPriAny.ts)
-- [Optional型](./lesson/lessonOptional.ts)
-- [演算子](./lesson/lessonCalc.ts)
-- [配列](./lesson/lessonArray.ts)
-- [連想配列](./lesson/lessonAssociativeArray.ts)
-- [リスト操作](./lesson/lessonListOperation.ts)
-- [if分（条件判断）](./lesson/lessonIf.ts)
-- [比較演算子](./lesson/lessonCompare.ts)
-- [AND・OR, 三項演算子](./lesson/lessonAndOr.ts)
-- [switch文（条件判断）](./lesson/lessonSwitch.ts)
-- [while文（繰り返し）](./lesson/lessonWhile.ts)
-- [for文（繰り返し）](./lesson/lessonFor.ts)
-- [Enum](./lesson/lessonEnum.ts)
-- [クラス ](./lesson/lessonClass.ts)
-- [キャスト変換（型変換）](./lesson/lessonCast.ts)
-- [数学計算（Math）](./lesson/lessonMath.ts)
-- [日付関数（Date）](./lesson/lessonDate.ts)
-- [static](./lesson/lessonStatic.ts)
-- [継承](./lesson/lessonInheritance.ts)
-- [インターフェース](./lesson/lessonInterface.ts)
-- [ジェネリクス](./lesson/lessonGenerics.ts)
-- [非同期処理](./lesson/lessonAsyncProcess.ts)
-- [ReactiveX](./lesson/lessonReactiveX.ts)
+- [Hello! World.を表示](./lesson/LessonHelloWorld.ts)
+- [変数と定数](./lesson/LessonLetConst.ts)
+- [関数](./lesson/LessonFunction.ts)
+- [プリミティブ型、Any型](./lesson/LessonPriAny.ts)
+- [Optional型](./lesson/LessonOptional.ts)
+- [演算子](./lesson/LessonCalc.ts)
+- [配列](./lesson/LessonArray.ts)
+- [連想配列](./lesson/LessonAssociativeArray.ts)
+- [リスト操作](./lesson/LessonListOperation.ts)
+- [if分（条件判断）](./lesson/LessonIf.ts)
+- [比較演算子](./lesson/LessonCompare.ts)
+- [AND・OR, 三項演算子](./lesson/LessonAndOr.ts)
+- [switch文（条件判断）](./lesson/LessonSwitch.ts)
+- [while文（繰り返し）](./lesson/LessonWhile.ts)
+- [for文（繰り返し）](./lesson/LessonFor.ts)
+- [Enum](./lesson/LessonEnum.ts)
+- [クラス ](./lesson/LessonClass.ts)
+- [キャスト変換（型変換）](./lesson/LessonCast.ts)
+- [数学計算（Math）](./lesson/LessonMath.ts)
+- [日付関数（Date）](./lesson/LessonDate.ts)
+- [static](./lesson/LessonStatic.ts)
+- [継承](./lesson/LessonInheritance.ts)
+- [インターフェース](./lesson/LessonInterface.ts)
+- [ジェネリクス](./lesson/LessonGenerics.ts)
+- [非同期処理](./lesson/LessonAsyncProcess.ts)
+- [ReactiveX](./lesson/LessonReactiveX.ts)
 - [課題](#課題)
 
 ## 学習
@@ -117,7 +117,7 @@ Hello! world.
 ### 変数と定数 〜 ReactiveX
 [目次](#目次)に沿って学習していきます。<br>
 ソースコードに書かれている通りに写経し、どのように動作するのかconsole.logを使って確認していきましょう。<br>
-[Lesson](https://github.com/Programmable-school/TypeScript-Training/tree/master/src/lesson)<br>
+[Lesson](./src/lesson)<br>
 
 ## 答え合わせ
 本リポジトリをローカルPCへ取り込み、全Lessonのソースコード及び挙動を確認できます。<br>
@@ -128,16 +128,17 @@ Hello! world.
 ├── package.json
 ├── src
 │   ├── app.ts
-│   ├── app_async.ts
-│   ├── app_rxjs.ts
+│   ├── appLesson.ts
+│   ├── appAasync.ts
+│   ├── appRxjs.ts
 │   ├── lesson
-│   │   ├── lessonAndOr.ts
+│   │   ├── LessonAndOr.ts
 │   │   ├── ....
 │   │   ├── ....
 │   │   ├── ....
-│   │   ├── lessonWhile.ts
+│   │   ├── LessonWhile.ts
 │   └── utils
-│       └── utils.ts
+│       └── Utils.ts
 └── tsconfig.json
 ```
 
@@ -780,4 +781,4 @@ referenceAndCopy()
 
 
 ### 答え
-課題の答えは[こちら](./task_answer)です。
+課題の答えは[こちら](./taskAnswer)です。
