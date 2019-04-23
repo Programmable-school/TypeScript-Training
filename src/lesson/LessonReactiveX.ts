@@ -16,7 +16,7 @@
 import { Observable, BehaviorSubject, from, zip, empty } from 'rxjs'
 import { map, catchError } from 'rxjs/operators'
 import axios, { AxiosResponse } from 'axios' 
-import { sleep } from '../utils/utils'
+import { sleep } from '../utils/Utils'
 
 /**
  * Qiita APIのURLを定義

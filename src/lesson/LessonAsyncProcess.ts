@@ -8,7 +8,7 @@
  *  概要（非公式だがわかりやすい）： https://qiita.com/tag1216/items/b0b90e30c7e581aa2b00
  */
 import axios from 'axios' // axiosを利用するためインポートする
-import { sleep } from '../utils/utils'
+import { sleep } from '../utils/Utils'
 
 /**
  * Qiita APIのURLを定義
