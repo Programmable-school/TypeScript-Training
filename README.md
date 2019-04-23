@@ -88,7 +88,7 @@ TypeScriptの設定ファイルです。このファイルを変更すること�
 
 ## トレーニングを始める
 
-### Hello! world.を表示する
+### Hello worldを表示する
 src配下にapp.tsを作成し、エディタで以下のコードを実装して保存します。
 ```typescript
 console.log("Hello world")
