@@ -108,7 +108,7 @@ app.jsを実行します。
 ```bash
 # 実行
 $ npm run start
-Hello! world.
+Hello world
 ```
 無事、表示されました。
 
@@ -116,7 +116,7 @@ Hello! world.
 ```bash
 # ビルド後に実行
 $ npm run serve
-Hello! world.
+Hello world
 ```
 
 それでは実際にコードを書いてTypeScriptを学習していきましょう。<br>
