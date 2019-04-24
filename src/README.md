@@ -82,10 +82,10 @@ $ mkdir build
 }
 ```
 
-### Hello! world.を表示する
+### Hello worldを表示する
 src配下にapp.tsを作成し、エディタで以下のコードを実装して保存します。
 ```typescript
-console.log("Hello! world.")
+console.log("Hello world")
 ```
 
 作成したapp.tsをビルドしてapp.jsにします。
@@ -102,7 +102,7 @@ app.jsを実行します。
 ```bash
 # 実行
 $ npm run start
-Hello! world.
+Hello world
 ```
 無事、表示されました。
 
@@ -110,9 +110,9 @@ Hello! world.
 ```bash
 # ビルド後に実行
 $ npm run serve
-Hello! world.
+Hello world
 ```
-おめでとうございます。環境構築からHelo! world.を表示させることができました。<br>
+おめでとうございます。環境構築からHelo worldを表示させることができました。<br>
 
 ### 変数と定数 〜 ReactiveX
 [目次](#目次)に沿って学習していきます。<br>
