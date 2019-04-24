@@ -1,15 +1,15 @@
 /* 日付関数（Date） */
 export function lessonDate() {
   
-  // ■ 現在の日時を取得
+  // 現在の日時を取得
   const nowDate: Date = new Date()
   console.log(nowDate)              // 2019-01-07T01:05:06.449Z
   console.log(nowDate.toString())   // Mon Jan 07 2019 10:05:06 GMT+0900 (JST)
 
-  // ■ タイムゾーン確認（実行環境に依存）
+  // タイムゾーン確認（実行環境に依存）
   console.log('Timezone', nowDate.getTimezoneOffset()/60) // -9 (実行環境によって異なる. -9の場合はUTC+9時間なのでJSTです)
 
-  // ■ 文字列から日時を取得
+  // 文字列から日時を取得
   const date1: Date = new Date('2019/1/6 10:20:30')
   console.log(date1)                     // 2019-01-06T01:20:30.000Z
   const year = date1.getFullYear()       // 年
@@ -22,7 +22,7 @@ export function lessonDate() {
   const dayOfWeekStr = ['日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日'][dayOfWeek]  // 曜日（文字列）
   console.log(`${year}/${month}/${day}（${dayOfWeekStr}） ${hour}:${minute}:${second}`) // 2019/1/6（日曜日） 10:20:30
 
-  // ■ set関数より日付を指定
+  // set関数より日付を指定
   const data2: Date = new Date()
   data2.setFullYear(2018)               // 2018年
   data2.setMonth(0)                     // 1月（0始まりなので）
