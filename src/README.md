@@ -117,7 +117,7 @@ Hello! world.
 ### 変数と定数 〜 ReactiveX
 [目次](#目次)に沿って学習していきます。<br>
 ソースコードに書かれている通りに写経し、どのように動作するのかconsole.logを使って確認していきましょう。<br>
-[Lesson](./src/lesson)<br>
+[Lesson](./lesson)<br>
 
 ## 答え合わせ
 本リポジトリをローカルPCへ取り込み、全Lessonのソースコード及び挙動を確認できます。<br>
