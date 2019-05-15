@@ -4,18 +4,18 @@ export function lessonAssociativeArray() {
     name: 'Taro',
     age: 20
   }
-  const itemB: any = {
+  const itemB: { name: string, age: number } = {
     name: 'Hanako',
     age: 30
   }
-  const itemC: any = {
-    name: 'Ueda',
-    age: 40
-  }
-  console.log(itemA) // { name: 'Taro', age: 20 }
-
-  const items: any[] = [itemA, itemB]
+  const itemC: { name?: string, age?: number } = {}
+  
+  const items: { name?: string, age?: number}[] = [itemA, itemB]
+  itemC.name = 'Ueda'
+  itemC.age = 40
   items.push(itemC)
+
+  console.log(itemA) // { name: 'Taro', age: 20 }
   console.log(items) // [ { name: 'Taro', age: 20 },
                      //   { name: 'Hanako', age: 30 },
                      //   { name: 'Ueda', age: 40 } ]
