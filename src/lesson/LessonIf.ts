@@ -1,4 +1,4 @@
-/* if分（条件判断） */
+/* if文（条件分岐） */
 export function lessonIf() {
   let value: number = 1
   if (value === 1) {

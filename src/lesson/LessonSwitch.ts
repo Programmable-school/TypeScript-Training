@@ -1,4 +1,4 @@
-/* switch文（条件判断） */
+/* switch文（条件分岐） */
 export function lessonSwitch() {
   const resultA: string = func1(1988)
   const resultB: string = func1(2018)
