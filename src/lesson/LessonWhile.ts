@@ -5,14 +5,14 @@ export function lessonWhile() {
   let total: number = nums[0]
 
   // while
-  while (index < 5) { // 無限ループ注意
+  while (index < 5) { // whileの条件確認は処理前に行われる。
     total += nums[index]
     index += 1
   }
-  console.log('while', total) // while 10
+  console.log('total', total) // total 10
 
   // do-while
   do {
-    console.log('do-while', `indexは${index}だけど必ず1回は実行される`) // do-while indexは5だけど必ず1回は実行される
-  } while(index < 5) // 繰り返し継続判断は後で実行される。
+    console.log(`indexは${index}だけど必ず1回は実行される`) // indexは5だけど必ず1回は実行される
+  } while(index < 5) // whileの条件確認は処理後に行われる。
 }

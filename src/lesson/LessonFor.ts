@@ -3,12 +3,12 @@ export function lessonFor() {
   const nums: number[] = [0, 1, 2, 3, 4, 5]
   
   // for
-  for(let i = 0; i < nums.length; i++) {
+  for (let i = 0; i < nums.length; i++) {
     console.log('for', i, nums[i]) // for 0 0 ... for 5 5 順に表示される
   }
 
   // for-in
-  for(let i in nums) {
+  for (let i in nums) {
     console.log('for in', i, nums[i]) // for in 0 0 ... for in 5 5 順に表示される
   }
 
