@@ -1,28 +1,47 @@
 /* クラス */
 class Human {
-  // ■ 変数（propety）
-  public name: string	        // 修飾子:public    外部公開
-  sexType: SexType	          // 修飾子:public    修飾子がない場合はpublicになる
-  height: number	            // 修飾子:public    修飾子がない場合はpublicになる
-  private weight: number	    // 修飾子:private   外部公開しないので自分しか読み書きできない
-  partner?: Human	            // optional型で宣言. Optional型の場合はデータにundefinedチェックを行う
-  readonly birthday: string	  // 修飾子:readonly  読み取り専用（定数）
+  /** 
+   * 変数（propety）
+   * */
 
-  // ■ コンストラクタはクラスのインスタンス（実体）が生成されたタイミングで処理される
+  /** 修飾子:public    外部公開, 修飾子がない場合はpublicになる */
+  public name: string
+  sexType: SexType
+  
+  /** 修飾子:private   外部公開しないので自分しか読み書きできない */
+  private height: number
+  private weight: number
+
+  /** publicのoptional型で宣言. Optional型の場合はデータにundefinedチェックを行う */
+  partner?: Human
+
+  /** 修飾子:readonly  読み取り専用（定数） */
+  readonly birthday: string	
+
+  /** getter settter */
+  get sexString(): String {
+    return this.sexType === SexType.Man ? '男性' : '女性'
+  }
+  set sexString(value: String) {
+    this.sexType = value === '男性' ? SexType.Man : SexType.Woman
+  }
+
+
+  /** 
+   * コンストラクタはクラスのインスタンス（実体）が生成されたタイミングで処理される
+   * */
   constructor(sexType: SexType, birthday: string) {
     this.sexType = sexType
     this.birthday = birthday    // コンストラクタの中で宣言できる
   }
 
-  // ■ 関数
-  // 修飾子を付けれる（public, privateなど） 修飾子がない場合はpublicになる.
+  /** 
+   * 関数
+   * 修飾子を付けれる（public, privateなど） 修飾子がない場合はpublicになる
+   * */
   setStatus(height: number, weight: number) {
     this.height = height
     this.weight = weight
-  }
-  
-  showStatus() {
-    console.log('name', this.name, 'height', this.height, 'weight', this.weight, 'birthday', this.birthday)
   }
 
   introPartner(human: Human) {
@@ -32,8 +51,13 @@ class Human {
       this.showHonne()
     }
   }
+ 
+  public showStatus() {
+    console.log('name', this.name, 'height', this.height, 'weight', this.weight, 'birthday', this.birthday)
+  }
 
-  showPartner() {
+
+  public showPartner() {
     if (this.partner !== undefined) {
       console.log(`${this.name}のパートナーは`, this.partner.name)
     }
@@ -50,10 +74,14 @@ enum SexType {
 }
 
 export function lessonClass() {
-  const man: Human = new Human(SexType.Man, '1990/1/1') // クラスのインスタンスを生成するときは new クラス名() の書き方をする
+  /** クラスのインスタンスを生成するときは new クラス名() の書き方をする */
+  const man: Human = new Human(SexType.Man, '1990/1/1')
   man.name = 'Taro'
   man.setStatus(170, 80)
-  man.showStatus()            // name Taro height 170 weight 80 birthday 1990/1/1
+  man.showStatus()                                  // name Taro height 170 weight 80 birthday 1990/1/1
+  console.log(`${man.sexType}, ${man.sexString}`)   // 0, 男性
+  man.sexString = '女性'
+  console.log(`${man.sexType}, ${man.sexString}`)   // 1, 女性
 
   const woman: Human = new Human(SexType.Woman, '1992/1/1')
   woman.name = 'Hanako'
