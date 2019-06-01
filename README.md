@@ -9,7 +9,7 @@
 
 ## 目次
 - [環境構築](https://github.com/Programmable-school/TypeScript-Training#%E6%89%8B%E9%A0%86)
-- [Hello! World.を表示](./src/lesson/LessonHelloWorld.ts)
+- [Hello Worldを表示](./src/lesson/LessonHelloWorld.ts)
 - [変数と定数](./src/lesson/LessonLetConst.ts)
 - [関数](./src/lesson/LessonFunction.ts)
 - [プリミティブ型、Any型](./src/lesson/LessonPriAny.ts)
